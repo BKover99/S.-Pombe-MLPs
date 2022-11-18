@@ -1,0 +1,1503 @@
+2022-11-01 16:35:56 Hail: INFO: Running Hail version 0.2.104-1940d9e8eaab
+2022-11-01 16:35:58 SparkContext: WARN: Using an existing SparkContext; some configuration may not take effect.
+2022-11-01 16:36:05 root: INFO: RegionPool: initialized for thread 15: Thread-4
+2022-11-01 16:36:05 root: INFO: globbing path /Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Jeffares/Jeffares SNPs/ERZ289255/Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf returned 1 files: Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf
+2022-11-01 16:36:05 root: INFO: globbing path file:/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Jeffares/Jeffares SNPs/ERZ289255/Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf returned 1 files: Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf
+2022-11-01 16:36:05 MemoryStore: INFO: Block broadcast_0 stored as values in memory (estimated size 2.1 KiB, free 366.3 MiB)
+2022-11-01 16:36:06 MemoryStore: INFO: Block broadcast_0_piece0 stored as bytes in memory (estimated size 548.0 B, free 366.3 MiB)
+2022-11-01 16:36:06 BlockManagerInfo: INFO: Added broadcast_0_piece0 in memory on eduroam-int-dhcp-97-180-2.ucl.ac.uk:64069 (size: 548.0 B, free: 366.3 MiB)
+2022-11-01 16:36:06 SparkContext: INFO: Created broadcast 0 from broadcast at SparkBackend.scala:342
+2022-11-01 16:36:06 root: INFO: RegionPool: FREE: 64.0K allocated (64.0K blocks / 0 chunks), regions.size = 1, 0 current java objects, thread 15: Thread-4
+2022-11-01 16:36:06 root: INFO: timing SparkBackend.parse_matrix_ir total 907.761ms self 907.761ms children 0.000ms %children 0.00%
+2022-11-01 16:36:06 root: INFO: RegionPool: initialized for thread 15: Thread-4
+2022-11-01 16:36:06 root: INFO: RegionPool: FREE: 64.0K allocated (64.0K blocks / 0 chunks), regions.size = 1, 0 current java objects, thread 15: Thread-4
+2022-11-01 16:36:06 root: INFO: timing SparkBackend.parse_value_ir total 43.838ms self 43.838ms children 0.000ms %children 0.00%
+2022-11-01 16:36:06 root: INFO: RegionPool: initialized for thread 15: Thread-4
+2022-11-01 16:36:06 root: INFO: starting execution of query hail_query_5 of initial size 4
+2022-11-01 16:36:06 root: INFO: optimize optimize: relationalLowerer, initial IR: before: IR size 4: 
+(Let __rng_state
+  (RNGStateLiteral (0 0 0 0))
+  (MatrixWrite
+    "{\"name\":\"MatrixNativeWriter\",\"path\":\"data.mt\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null,\"partitions\":null,\"partitionsTypeStr\":null,\"checkpointFile\":null}"
+    (MatrixRead
+      Matrix{global:Struct{},col_key:[s],col:Struct{s:String},row_key:[[locus,alleles]],row:Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AF:Array[Float64],BaseQRankSum:Float64,DP:Int32,DS:Boolean,Dels:Float64,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,RPA:Array[Int32],RU:String,ReadPosRankSum:Float64,SB:Array[Float64],STR:Boolean,SF:Array[String],AC:Array[Int32],AN:Int32,`MM.RNA.CPC`:Array[Float64],`MN.RNA.CPC`:Float64,`MM.PROT.CPC`:Array[Float64],`MN.PROT.CPC`:Array[Float64],`MAX.RNA.CPC`:Array[Float64],`MAX.PROT.CPC`:Array[Float64],`SUM.RNA.CPC`:Array[Float64],`SUM.PROT.CPC`:Array[Float64],`MED.RNA.CPC`:Array[Float64],`MED.PROT.CPC`:Array[Float64],CPCFRAC:Array[Float64],GENETYPE:Array[String],PHASE:Array[String],DEGENCODE:Array[String],DEGEN:Array[String],AMINO:Array[String],CODON:Array[String],GENE:Array[String],ANNO:Array[String],EFF:Array[String]}},entry:Struct{AD:Array[Int32],DP:Int32,GQ:Int32,GT:Call,FT:String,MLPSAC:Array[Int32],MLPSAF:Array[Float64],PL:Array[Int32]}}
+      False False
+      {\"files\":[\"/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Jeffares/Jeffares SNPs/ERZ289255/Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatTypeName\":\"Float64\",\"rg\":\"Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{},\"partitionsJSON\":null,\"name\":\"MatrixVCFReader\"})))
+2022-11-01 16:36:06 root: INFO: optimize optimize: relationalLowerer, initial IR: after: IR size 2:
+(MatrixWrite
+  "{\"name\":\"MatrixNativeWriter\",\"path\":\"data.mt\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null,\"partitions\":null,\"partitionsTypeStr\":null,\"checkpointFile\":null}"
+  (MatrixRead
+    Matrix{global:Struct{},col_key:[s],col:Struct{s:String},row_key:[[locus,alleles]],row:Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AF:Array[Float64],BaseQRankSum:Float64,DP:Int32,DS:Boolean,Dels:Float64,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,RPA:Array[Int32],RU:String,ReadPosRankSum:Float64,SB:Array[Float64],STR:Boolean,SF:Array[String],AC:Array[Int32],AN:Int32,`MM.RNA.CPC`:Array[Float64],`MN.RNA.CPC`:Float64,`MM.PROT.CPC`:Array[Float64],`MN.PROT.CPC`:Array[Float64],`MAX.RNA.CPC`:Array[Float64],`MAX.PROT.CPC`:Array[Float64],`SUM.RNA.CPC`:Array[Float64],`SUM.PROT.CPC`:Array[Float64],`MED.RNA.CPC`:Array[Float64],`MED.PROT.CPC`:Array[Float64],CPCFRAC:Array[Float64],GENETYPE:Array[String],PHASE:Array[String],DEGENCODE:Array[String],DEGEN:Array[String],AMINO:Array[String],CODON:Array[String],GENE:Array[String],ANNO:Array[String],EFF:Array[String]}},entry:Struct{AD:Array[Int32],DP:Int32,GQ:Int32,GT:Call,FT:String,MLPSAC:Array[Int32],MLPSAF:Array[Float64],PL:Array[Int32]}}
+    False False
+    {\"files\":[\"/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Jeffares/Jeffares SNPs/ERZ289255/Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatTypeName\":\"Float64\",\"rg\":\"Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{},\"partitionsJSON\":null,\"name\":\"MatrixVCFReader\"}))
+2022-11-01 16:36:06 root: INFO: optimize optimize: relationalLowerer, after LowerMatrixToTable: before: IR size 2: 
+(TableWrite
+  "{\"writer\":{\"path\":\"data.mt\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null,\"partitions\":null,\"partitionsTypeStr\":null,\"checkpointFile\":null},\"colsFieldName\":\"__cols\",\"entriesFieldName\":\"the entries! [877f12a8827e18f61222c6c8c5fb04a8]\",\"colKey\":[\"s\"]}"
+  (TableRead
+    Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AF:Array[Float64],BaseQRankSum:Float64,DP:Int32,DS:Boolean,Dels:Float64,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,RPA:Array[Int32],RU:String,ReadPosRankSum:Float64,SB:Array[Float64],STR:Boolean,SF:Array[String],AC:Array[Int32],AN:Int32,`MM.RNA.CPC`:Array[Float64],`MN.RNA.CPC`:Float64,`MM.PROT.CPC`:Array[Float64],`MN.PROT.CPC`:Array[Float64],`MAX.RNA.CPC`:Array[Float64],`MAX.PROT.CPC`:Array[Float64],`SUM.RNA.CPC`:Array[Float64],`SUM.PROT.CPC`:Array[Float64],`MED.RNA.CPC`:Array[Float64],`MED.PROT.CPC`:Array[Float64],CPCFRAC:Array[Float64],GENETYPE:Array[String],PHASE:Array[String],DEGENCODE:Array[String],DEGEN:Array[String],AMINO:Array[String],CODON:Array[String],GENE:Array[String],ANNO:Array[String],EFF:Array[String]},`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{AD:Array[Int32],DP:Int32,GQ:Int32,GT:Call,FT:String,MLPSAC:Array[Int32],MLPSAF:Array[Float64],PL:Array[Int32]}]}}
+    False
+    {\"files\":[\"/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Jeffares/Jeffares SNPs/ERZ289255/Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatTypeName\":\"Float64\",\"rg\":\"Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{},\"partitionsJSON\":null,\"name\":\"MatrixVCFReader\"}))
+2022-11-01 16:36:06 root: INFO: optimize optimize: relationalLowerer, after LowerMatrixToTable: after: IR size 2:
+(TableWrite
+  "{\"writer\":{\"path\":\"data.mt\",\"overwrite\":true,\"stageLocally\":false,\"codecSpecJSONStr\":null,\"partitions\":null,\"partitionsTypeStr\":null,\"checkpointFile\":null},\"colsFieldName\":\"__cols\",\"entriesFieldName\":\"the entries! [877f12a8827e18f61222c6c8c5fb04a8]\",\"colKey\":[\"s\"]}"
+  (TableRead
+    Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AF:Array[Float64],BaseQRankSum:Float64,DP:Int32,DS:Boolean,Dels:Float64,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,RPA:Array[Int32],RU:String,ReadPosRankSum:Float64,SB:Array[Float64],STR:Boolean,SF:Array[String],AC:Array[Int32],AN:Int32,`MM.RNA.CPC`:Array[Float64],`MN.RNA.CPC`:Float64,`MM.PROT.CPC`:Array[Float64],`MN.PROT.CPC`:Array[Float64],`MAX.RNA.CPC`:Array[Float64],`MAX.PROT.CPC`:Array[Float64],`SUM.RNA.CPC`:Array[Float64],`SUM.PROT.CPC`:Array[Float64],`MED.RNA.CPC`:Array[Float64],`MED.PROT.CPC`:Array[Float64],CPCFRAC:Array[Float64],GENETYPE:Array[String],PHASE:Array[String],DEGENCODE:Array[String],DEGEN:Array[String],AMINO:Array[String],CODON:Array[String],GENE:Array[String],ANNO:Array[String],EFF:Array[String]},`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{AD:Array[Int32],DP:Int32,GQ:Int32,GT:Call,FT:String,MLPSAC:Array[Int32],MLPSAF:Array[Float64],PL:Array[Int32]}]}}
+    False
+    {\"files\":[\"/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Jeffares/Jeffares SNPs/ERZ289255/Spombe.2013-01-02.filt3c.nr57-final.snps.anno-snpeff3.cleaned4.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatTypeName\":\"Float64\",\"rg\":\"Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{},\"partitionsJSON\":null,\"name\":\"MatrixVCFReader\"}))
+2022-11-01 16:36:06 root: INFO: LowerOrInterpretNonCompilable: whole stage code generation is a go!
+2022-11-01 16:36:06 root: INFO: lowering result: TableWrite
+2022-11-01 16:36:06 Hail: INFO: scanning VCF for sortedness...
+2022-11-01 16:36:06 root: INFO: optimize optimize: compileLowerer, initial IR: before: IR size 169: 
+(Let sortedPartData
+  (ArraySort __iruid_824 __iruid_825
+    (Let __iruid_820
+      (CollectDistributedArray table_coerce_sortedness
+        context globals
+        (ToStream False
+          (Literal
+            Array[Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}]
+            <literal value>))
+        (MakeStruct)
+        (StreamAgg x
+          (StreamAggScan key
+            (ReadPartition
+              Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String]}
+              "{\"category\":\"PartitionIteratorLongReader\",\"fullRowType\":\"Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],__row_uid:Tuple[Int64,Int64]}\",\"uidFieldName\":\"__row_uid\",\"contextType\":\"Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}\"}"
+              (Ref context))
+            (MakeStruct
+              (key (Ref key))
+              (token
+                (ApplySeeded rand_unif 1 Float64
+                  (F64 0.0)
+                  (F64 1.0)
+                  (NA RNGState)))
+              (prevkey
+                (ApplyScanOp PrevNonnull () ((Ref key))))))
+          (Let n
+            (ApplyAggOp Count () ())
+            (AggLet key False
+              (GetField key (Ref x))
+              (MakeStruct
+                (n (Ref n))
+                (minkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref key) (Ref key))))
+                (maxkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref key) (Ref key))))
+                (ksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA (GetField prevkey (Ref x)))
+                            (ApplyComparisonOp LTEQ
+                              (GetField prevkey (Ref x))
+                              (GetField key (Ref x)))))))
+                    (Ref n)))
+                (pksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA
+                              (SelectFields (locus) (GetField prevkey (Ref x))))
+                            (ApplyComparisonOp LTEQ
+                              (SelectFields (locus) (GetField prevkey (Ref x)))
+                              (SelectFields (locus) (GetField key (Ref x))))))))
+                    (Ref n)))
+                (sample
+                  (ApplyAggOp TakeBy
+                    ((I32 20))
+                    ((GetField key (Ref x))
+                      (GetField token (Ref x)))))))))
+        (NA String))
+      (StreamMap __iruid_823
+        (StreamFilter __iruid_822
+          (StreamMap __iruid_821
+            (StreamRange -1 False
+              (I32 0)
+              (ArrayLen (Ref __iruid_820))
+              (I32 1))
+            (InsertFields
+              (ArrayRef -1 (Ref __iruid_820) (Ref __iruid_821))
+              None
+              (i (Ref __iruid_821))))
+          (ApplyComparisonOp GT
+            (ArrayLen (GetField minkey (Ref __iruid_822)))
+            (I32 0)))
+        (InsertFields
+          (Ref __iruid_823)
+          None
+          (minkey
+            (ArrayRef -1
+              (GetField minkey (Ref __iruid_823))
+              (I32 0)))
+          (maxkey
+            (ArrayRef -1
+              (GetField maxkey (Ref __iruid_823))
+              (I32 0))))))
+    (ApplyComparisonOp LT
+      (SelectFields (minkey maxkey) (Ref __iruid_824))
+      (SelectFields (minkey maxkey) (Ref __iruid_825))))
+  (MakeStruct
+    (ksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold acc partDataWithIndex
+          (ToStream False (Ref sortedPartData))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref acc)
+            (GetField ksorted (Ref partDataWithIndex))))
+        (StreamFold acc i
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref sortedPartData))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref acc)
+            (ApplyComparisonOp LTEQ
+              (GetField maxkey
+                (ArrayRef -1 (Ref sortedPartData) (Ref i)))
+              (GetField minkey
+                (ArrayRef -1
+                  (Ref sortedPartData)
+                  (ApplyBinaryPrimOp Add (Ref i) (I32 1)))))))))
+    (pksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold acc partDataWithIndex
+          (ToStream False (Ref sortedPartData))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref acc)
+            (GetField pksorted (Ref partDataWithIndex))))
+        (StreamFold acc i
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref sortedPartData))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref acc)
+            (ApplyComparisonOp LTEQ
+              (SelectFields (locus)
+                (GetField maxkey
+                  (ArrayRef -1 (Ref sortedPartData) (Ref i))))
+              (SelectFields (locus)
+                (GetField minkey
+                  (ArrayRef -1
+                    (Ref sortedPartData)
+                    (ApplyBinaryPrimOp Add (Ref i) (I32 1))))))))))
+    (sortedPartData (Ref sortedPartData))))
+2022-11-01 16:36:07 root: INFO: optimize optimize: compileLowerer, initial IR: after: IR size 169:
+(Let __iruid_868
+  (ArraySort __iruid_869 __iruid_870
+    (Let __iruid_871
+      (CollectDistributedArray table_coerce_sortedness
+        __iruid_872 __iruid_873
+        (ToStream False
+          (Literal
+            Array[Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}]
+            <literal value>))
+        (Literal Struct{} <literal value>)
+        (StreamAgg __iruid_874
+          (StreamAggScan __iruid_875
+            (ReadPartition
+              Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String]}
+              "{\"category\":\"PartitionIteratorLongReader\",\"fullRowType\":\"Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],__row_uid:Tuple[Int64,Int64]}\",\"uidFieldName\":\"__row_uid\",\"contextType\":\"Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}\"}"
+              (Ref __iruid_872))
+            (MakeStruct
+              (key (Ref __iruid_875))
+              (token
+                (ApplySeeded rand_unif 1 Float64
+                  (F64 0.0)
+                  (F64 1.0)
+                  (NA RNGState)))
+              (prevkey
+                (ApplyScanOp PrevNonnull
+                  ()
+                  ((Ref __iruid_875))))))
+          (Let __iruid_876
+            (ApplyAggOp Count () ())
+            (AggLet __iruid_877 False
+              (GetField key (Ref __iruid_874))
+              (MakeStruct
+                (n (Ref __iruid_876))
+                (minkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref __iruid_877) (Ref __iruid_877))))
+                (maxkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref __iruid_877) (Ref __iruid_877))))
+                (ksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA (GetField prevkey (Ref __iruid_874)))
+                            (ApplyComparisonOp LTEQ
+                              (GetField prevkey (Ref __iruid_874))
+                              (GetField key (Ref __iruid_874)))))))
+                    (Ref __iruid_876)))
+                (pksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA
+                              (SelectFields ()
+                                (GetField prevkey (Ref __iruid_874))))
+                            (ApplyComparisonOp LTEQ
+                              (SelectFields (locus)
+                                (GetField prevkey (Ref __iruid_874)))
+                              (SelectFields (locus)
+                                (GetField key (Ref __iruid_874))))))))
+                    (Ref __iruid_876)))
+                (sample
+                  (ApplyAggOp TakeBy
+                    ((I32 20))
+                    ((GetField key (Ref __iruid_874))
+                      (GetField token (Ref __iruid_874)))))))))
+        (NA String))
+      (StreamMap __iruid_878
+        (StreamFilter __iruid_879
+          (StreamMap __iruid_880
+            (StreamRange -1 False
+              (I32 0)
+              (ArrayLen (Ref __iruid_871))
+              (I32 1))
+            (InsertFields
+              (ArrayRef -1 (Ref __iruid_871) (Ref __iruid_880))
+              None
+              (i (Ref __iruid_880))))
+          (ApplyComparisonOp GT
+            (ArrayLen (GetField minkey (Ref __iruid_879)))
+            (I32 0)))
+        (InsertFields
+          (Ref __iruid_878)
+          None
+          (minkey
+            (ArrayRef -1
+              (GetField minkey (Ref __iruid_878))
+              (I32 0)))
+          (maxkey
+            (ArrayRef -1
+              (GetField maxkey (Ref __iruid_878))
+              (I32 0))))))
+    (ApplyComparisonOp LT
+      (SelectFields (minkey maxkey) (Ref __iruid_869))
+      (SelectFields (minkey maxkey) (Ref __iruid_870))))
+  (MakeStruct
+    (ksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_881 __iruid_882
+          (ToStream False (Ref __iruid_868))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_881)
+            (GetField ksorted (Ref __iruid_882))))
+        (StreamFold __iruid_883 __iruid_884
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_868))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_883)
+            (ApplyComparisonOp LTEQ
+              (GetField maxkey
+                (ArrayRef -1 (Ref __iruid_868) (Ref __iruid_884)))
+              (GetField minkey
+                (ArrayRef -1
+                  (Ref __iruid_868)
+                  (ApplyBinaryPrimOp Add
+                    (Ref __iruid_884)
+                    (I32 1)))))))))
+    (pksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_885 __iruid_886
+          (ToStream False (Ref __iruid_868))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_885)
+            (GetField pksorted (Ref __iruid_886))))
+        (StreamFold __iruid_887 __iruid_888
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_868))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_887)
+            (ApplyComparisonOp LTEQ
+              (SelectFields (locus)
+                (GetField maxkey
+                  (ArrayRef -1
+                    (Ref __iruid_868)
+                    (Ref __iruid_888))))
+              (SelectFields (locus)
+                (GetField minkey
+                  (ArrayRef -1
+                    (Ref __iruid_868)
+                    (ApplyBinaryPrimOp Add
+                      (Ref __iruid_888)
+                      (I32 1))))))))))
+    (sortedPartData (Ref __iruid_868))))
+2022-11-01 16:36:07 root: INFO: optimize optimize: compileLowerer, after InlineApplyIR: before: IR size 169: 
+(Let __iruid_868
+  (ArraySort __iruid_869 __iruid_870
+    (Let __iruid_871
+      (CollectDistributedArray table_coerce_sortedness
+        __iruid_872 __iruid_873
+        (ToStream False
+          (Literal
+            Array[Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}]
+            <literal value>))
+        (Literal Struct{} <literal value>)
+        (StreamAgg __iruid_874
+          (StreamAggScan __iruid_875
+            (ReadPartition
+              Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String]}
+              "{\"category\":\"PartitionIteratorLongReader\",\"fullRowType\":\"Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],__row_uid:Tuple[Int64,Int64]}\",\"uidFieldName\":\"__row_uid\",\"contextType\":\"Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}\"}"
+              (Ref __iruid_872))
+            (MakeStruct
+              (key (Ref __iruid_875))
+              (token
+                (ApplySeeded rand_unif 1 Float64
+                  (F64 0.0)
+                  (F64 1.0)
+                  (NA RNGState)))
+              (prevkey
+                (ApplyScanOp PrevNonnull
+                  ()
+                  ((Ref __iruid_875))))))
+          (Let __iruid_876
+            (ApplyAggOp Count () ())
+            (AggLet __iruid_877 False
+              (GetField key (Ref __iruid_874))
+              (MakeStruct
+                (n (Ref __iruid_876))
+                (minkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref __iruid_877) (Ref __iruid_877))))
+                (maxkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref __iruid_877) (Ref __iruid_877))))
+                (ksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA (GetField prevkey (Ref __iruid_874)))
+                            (ApplyComparisonOp LTEQ
+                              (GetField prevkey (Ref __iruid_874))
+                              (GetField key (Ref __iruid_874)))))))
+                    (Ref __iruid_876)))
+                (pksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA
+                              (SelectFields ()
+                                (GetField prevkey (Ref __iruid_874))))
+                            (ApplyComparisonOp LTEQ
+                              (SelectFields (locus)
+                                (GetField prevkey (Ref __iruid_874)))
+                              (SelectFields (locus)
+                                (GetField key (Ref __iruid_874))))))))
+                    (Ref __iruid_876)))
+                (sample
+                  (ApplyAggOp TakeBy
+                    ((I32 20))
+                    ((GetField key (Ref __iruid_874))
+                      (GetField token (Ref __iruid_874)))))))))
+        (NA String))
+      (StreamMap __iruid_878
+        (StreamFilter __iruid_879
+          (StreamMap __iruid_880
+            (StreamRange -1 False
+              (I32 0)
+              (ArrayLen (Ref __iruid_871))
+              (I32 1))
+            (InsertFields
+              (ArrayRef -1 (Ref __iruid_871) (Ref __iruid_880))
+              None
+              (i (Ref __iruid_880))))
+          (ApplyComparisonOp GT
+            (ArrayLen (GetField minkey (Ref __iruid_879)))
+            (I32 0)))
+        (InsertFields
+          (Ref __iruid_878)
+          None
+          (minkey
+            (ArrayRef -1
+              (GetField minkey (Ref __iruid_878))
+              (I32 0)))
+          (maxkey
+            (ArrayRef -1
+              (GetField maxkey (Ref __iruid_878))
+              (I32 0))))))
+    (ApplyComparisonOp LT
+      (SelectFields (minkey maxkey) (Ref __iruid_869))
+      (SelectFields (minkey maxkey) (Ref __iruid_870))))
+  (MakeStruct
+    (ksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_881 __iruid_882
+          (ToStream False (Ref __iruid_868))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_881)
+            (GetField ksorted (Ref __iruid_882))))
+        (StreamFold __iruid_883 __iruid_884
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_868))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_883)
+            (ApplyComparisonOp LTEQ
+              (GetField maxkey
+                (ArrayRef -1 (Ref __iruid_868) (Ref __iruid_884)))
+              (GetField minkey
+                (ArrayRef -1
+                  (Ref __iruid_868)
+                  (ApplyBinaryPrimOp Add
+                    (Ref __iruid_884)
+                    (I32 1)))))))))
+    (pksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_885 __iruid_886
+          (ToStream False (Ref __iruid_868))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_885)
+            (GetField pksorted (Ref __iruid_886))))
+        (StreamFold __iruid_887 __iruid_888
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_868))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_887)
+            (ApplyComparisonOp LTEQ
+              (SelectFields (locus)
+                (GetField maxkey
+                  (ArrayRef -1
+                    (Ref __iruid_868)
+                    (Ref __iruid_888))))
+              (SelectFields (locus)
+                (GetField minkey
+                  (ArrayRef -1
+                    (Ref __iruid_868)
+                    (ApplyBinaryPrimOp Add
+                      (Ref __iruid_888)
+                      (I32 1))))))))))
+    (sortedPartData (Ref __iruid_868))))
+2022-11-01 16:36:07 root: INFO: optimize optimize: compileLowerer, after InlineApplyIR: after: IR size 169:
+(Let __iruid_931
+  (ArraySort __iruid_932 __iruid_933
+    (Let __iruid_934
+      (CollectDistributedArray table_coerce_sortedness
+        __iruid_935 __iruid_936
+        (ToStream False
+          (Literal
+            Array[Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}]
+            <literal value>))
+        (Literal Struct{} <literal value>)
+        (StreamAgg __iruid_937
+          (StreamAggScan __iruid_938
+            (ReadPartition
+              Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String]}
+              "{\"category\":\"PartitionIteratorLongReader\",\"fullRowType\":\"Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],__row_uid:Tuple[Int64,Int64]}\",\"uidFieldName\":\"__row_uid\",\"contextType\":\"Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}\"}"
+              (Ref __iruid_935))
+            (MakeStruct
+              (key (Ref __iruid_938))
+              (token
+                (ApplySeeded rand_unif 1 Float64
+                  (F64 0.0)
+                  (F64 1.0)
+                  (NA RNGState)))
+              (prevkey
+                (ApplyScanOp PrevNonnull
+                  ()
+                  ((Ref __iruid_938))))))
+          (Let __iruid_939
+            (ApplyAggOp Count () ())
+            (AggLet __iruid_940 False
+              (GetField key (Ref __iruid_937))
+              (MakeStruct
+                (n (Ref __iruid_939))
+                (minkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref __iruid_940) (Ref __iruid_940))))
+                (maxkey
+                  (ApplyAggOp TakeBy
+                    ((I32 1))
+                    ((Ref __iruid_940) (Ref __iruid_940))))
+                (ksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA (GetField prevkey (Ref __iruid_937)))
+                            (ApplyComparisonOp LTEQ
+                              (GetField prevkey (Ref __iruid_937))
+                              (GetField key (Ref __iruid_937)))))))
+                    (Ref __iruid_939)))
+                (pksorted
+                  (ApplyComparisonOp EQ
+                    (ApplyAggOp Sum
+                      ()
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA
+                              (SelectFields ()
+                                (GetField prevkey (Ref __iruid_937))))
+                            (ApplyComparisonOp LTEQ
+                              (SelectFields (locus)
+                                (GetField prevkey (Ref __iruid_937)))
+                              (SelectFields (locus)
+                                (GetField key (Ref __iruid_937))))))))
+                    (Ref __iruid_939)))
+                (sample
+                  (ApplyAggOp TakeBy
+                    ((I32 20))
+                    ((GetField key (Ref __iruid_937))
+                      (GetField token (Ref __iruid_937)))))))))
+        (NA String))
+      (StreamMap __iruid_941
+        (StreamFilter __iruid_942
+          (StreamMap __iruid_943
+            (StreamRange -1 False
+              (I32 0)
+              (ArrayLen (Ref __iruid_934))
+              (I32 1))
+            (InsertFields
+              (ArrayRef -1 (Ref __iruid_934) (Ref __iruid_943))
+              None
+              (i (Ref __iruid_943))))
+          (ApplyComparisonOp GT
+            (ArrayLen (GetField minkey (Ref __iruid_942)))
+            (I32 0)))
+        (InsertFields
+          (Ref __iruid_941)
+          None
+          (minkey
+            (ArrayRef -1
+              (GetField minkey (Ref __iruid_941))
+              (I32 0)))
+          (maxkey
+            (ArrayRef -1
+              (GetField maxkey (Ref __iruid_941))
+              (I32 0))))))
+    (ApplyComparisonOp LT
+      (SelectFields (minkey maxkey) (Ref __iruid_932))
+      (SelectFields (minkey maxkey) (Ref __iruid_933))))
+  (MakeStruct
+    (ksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_944 __iruid_945
+          (ToStream False (Ref __iruid_931))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_944)
+            (GetField ksorted (Ref __iruid_945))))
+        (StreamFold __iruid_946 __iruid_947
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_931))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_946)
+            (ApplyComparisonOp LTEQ
+              (GetField maxkey
+                (ArrayRef -1 (Ref __iruid_931) (Ref __iruid_947)))
+              (GetField minkey
+                (ArrayRef -1
+                  (Ref __iruid_931)
+                  (ApplyBinaryPrimOp Add
+                    (Ref __iruid_947)
+                    (I32 1)))))))))
+    (pksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_948 __iruid_949
+          (ToStream False (Ref __iruid_931))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_948)
+            (GetField pksorted (Ref __iruid_949))))
+        (StreamFold __iruid_950 __iruid_951
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_931))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_950)
+            (ApplyComparisonOp LTEQ
+              (SelectFields (locus)
+                (GetField maxkey
+                  (ArrayRef -1
+                    (Ref __iruid_931)
+                    (Ref __iruid_951))))
+              (SelectFields (locus)
+                (GetField minkey
+                  (ArrayRef -1
+                    (Ref __iruid_931)
+                    (ApplyBinaryPrimOp Add
+                      (Ref __iruid_951)
+                      (I32 1))))))))))
+    (sortedPartData (Ref __iruid_931))))
+2022-11-01 16:36:07 root: INFO: optimize optimize: compileLowerer, after LowerArrayAggsToRunAggs: before: IR size 207: 
+(Let __iruid_931
+  (ArraySort __iruid_932 __iruid_933
+    (Let __iruid_934
+      (CollectDistributedArray table_coerce_sortedness
+        __iruid_935 __iruid_936
+        (ToStream False
+          (Literal
+            Array[Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}]
+            <literal value>))
+        (Literal Struct{} <literal value>)
+        (Let __iruid_953
+          (RunAgg ((TypedStateSig +PInt64)
+              
+              (TakeByStateSig
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})
+              
+              (TakeByStateSig
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})
+              (TypedStateSig +PInt64)
+              (TypedStateSig +PInt64)
+              
+              (TakeByStateSig
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                +PFloat64))
+            (Begin
+              (Begin
+                (InitOp 0 (Count (TypedStateSig +PInt64)) ())
+                (InitOp 1 
+                  (TakeBy 
+                    (TakeByStateSig
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                  ((I32 1)))
+                (InitOp 2 
+                  (TakeBy 
+                    (TakeByStateSig
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                  ((I32 1)))
+                (InitOp 3 (Sum (TypedStateSig +PInt64)) ())
+                (InitOp 4 (Sum (TypedStateSig +PInt64)) ())
+                (InitOp 5 
+                  (TakeBy 
+                    (TakeByStateSig
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                      +PFloat64))
+                  ((I32 20))))
+              (StreamFor __iruid_937
+                (RunAggScan __iruid_938 (
+                    (TypedStateSig
+                      PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                  (ReadPartition
+                    Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String]}
+                    "{\"category\":\"PartitionIteratorLongReader\",\"fullRowType\":\"Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],__row_uid:Tuple[Int64,Int64]}\",\"uidFieldName\":\"__row_uid\",\"contextType\":\"Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}\"}"
+                    (Ref __iruid_935))
+                  (Begin
+                    (InitOp 0 
+                      (PrevNonnull 
+                        (TypedStateSig
+                          PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ()))
+                  (Begin
+                    (SeqOp 0 
+                      (PrevNonnull 
+                        (TypedStateSig
+                          PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ((Ref __iruid_938))))
+                  (Let __iruid_952
+                    (MakeTuple (0)
+                      (ResultOp 0 
+                        (PrevNonnull 
+                          (TypedStateSig
+                            PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))))
+                    (MakeStruct
+                      (key (Ref __iruid_938))
+                      (token
+                        (ApplySeeded rand_unif 1 Float64
+                          (F64 0.0)
+                          (F64 1.0)
+                          (NA RNGState)))
+                      (prevkey (GetTupleElement 0 (Ref __iruid_952))))))
+                (Let __iruid_940
+                  (GetField key (Ref __iruid_937))
+                  (Begin
+                    (SeqOp 0 (Count (TypedStateSig +PInt64)) ())
+                    (SeqOp 1 
+                      (TakeBy 
+                        (TakeByStateSig
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ((Ref __iruid_940) (Ref __iruid_940)))
+                    (SeqOp 2 
+                      (TakeBy 
+                        (TakeByStateSig
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ((Ref __iruid_940) (Ref __iruid_940)))
+                    (SeqOp 3 (Sum (TypedStateSig +PInt64))
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA (GetField prevkey (Ref __iruid_937)))
+                            (ApplyComparisonOp LTEQ
+                              (GetField prevkey (Ref __iruid_937))
+                              (GetField key (Ref __iruid_937)))))))
+                    (SeqOp 4 (Sum (TypedStateSig +PInt64))
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA
+                              (SelectFields ()
+                                (GetField prevkey (Ref __iruid_937))))
+                            (ApplyComparisonOp LTEQ
+                              (SelectFields (locus)
+                                (GetField prevkey (Ref __iruid_937)))
+                              (SelectFields (locus)
+                                (GetField key (Ref __iruid_937))))))))
+                    (SeqOp 5 
+                      (TakeBy 
+                        (TakeByStateSig
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                          +PFloat64))
+                      ((GetField key (Ref __iruid_937))
+                        (GetField token (Ref __iruid_937))))))))
+            (MakeTuple (0 1 2 3 4 5)
+              (ResultOp 0 (Count (TypedStateSig +PInt64)))
+              (ResultOp 1 
+                (TakeBy 
+                  (TakeByStateSig
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})))
+              (ResultOp 2 
+                (TakeBy 
+                  (TakeByStateSig
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})))
+              (ResultOp 3 (Sum (TypedStateSig +PInt64)))
+              (ResultOp 4 (Sum (TypedStateSig +PInt64)))
+              (ResultOp 5 
+                (TakeBy 
+                  (TakeByStateSig
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                    +PFloat64)))))
+          (Let __iruid_939
+            (GetTupleElement 0 (Ref __iruid_953))
+            (MakeStruct
+              (n (Ref __iruid_939))
+              (minkey (GetTupleElement 1 (Ref __iruid_953)))
+              (maxkey (GetTupleElement 2 (Ref __iruid_953)))
+              (ksorted
+                (ApplyComparisonOp EQ
+                  (GetTupleElement 3 (Ref __iruid_953))
+                  (Ref __iruid_939)))
+              (pksorted
+                (ApplyComparisonOp EQ
+                  (GetTupleElement 4 (Ref __iruid_953))
+                  (Ref __iruid_939)))
+              (sample (GetTupleElement 5 (Ref __iruid_953))))))
+        (NA String))
+      (StreamMap __iruid_941
+        (StreamFilter __iruid_942
+          (StreamMap __iruid_943
+            (StreamRange -1 False
+              (I32 0)
+              (ArrayLen (Ref __iruid_934))
+              (I32 1))
+            (InsertFields
+              (ArrayRef -1 (Ref __iruid_934) (Ref __iruid_943))
+              None
+              (i (Ref __iruid_943))))
+          (ApplyComparisonOp GT
+            (ArrayLen (GetField minkey (Ref __iruid_942)))
+            (I32 0)))
+        (InsertFields
+          (Ref __iruid_941)
+          None
+          (minkey
+            (ArrayRef -1
+              (GetField minkey (Ref __iruid_941))
+              (I32 0)))
+          (maxkey
+            (ArrayRef -1
+              (GetField maxkey (Ref __iruid_941))
+              (I32 0))))))
+    (ApplyComparisonOp LT
+      (SelectFields (minkey maxkey) (Ref __iruid_932))
+      (SelectFields (minkey maxkey) (Ref __iruid_933))))
+  (MakeStruct
+    (ksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_944 __iruid_945
+          (ToStream False (Ref __iruid_931))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_944)
+            (GetField ksorted (Ref __iruid_945))))
+        (StreamFold __iruid_946 __iruid_947
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_931))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_946)
+            (ApplyComparisonOp LTEQ
+              (GetField maxkey
+                (ArrayRef -1 (Ref __iruid_931) (Ref __iruid_947)))
+              (GetField minkey
+                (ArrayRef -1
+                  (Ref __iruid_931)
+                  (ApplyBinaryPrimOp Add
+                    (Ref __iruid_947)
+                    (I32 1)))))))))
+    (pksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_948 __iruid_949
+          (ToStream False (Ref __iruid_931))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_948)
+            (GetField pksorted (Ref __iruid_949))))
+        (StreamFold __iruid_950 __iruid_951
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_931))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_950)
+            (ApplyComparisonOp LTEQ
+              (SelectFields (locus)
+                (GetField maxkey
+                  (ArrayRef -1
+                    (Ref __iruid_931)
+                    (Ref __iruid_951))))
+              (SelectFields (locus)
+                (GetField minkey
+                  (ArrayRef -1
+                    (Ref __iruid_931)
+                    (ApplyBinaryPrimOp Add
+                      (Ref __iruid_951)
+                      (I32 1))))))))))
+    (sortedPartData (Ref __iruid_931))))
+2022-11-01 16:36:07 root: INFO: optimize optimize: compileLowerer, after LowerArrayAggsToRunAggs: after: IR size 207:
+(Let __iruid_1000
+  (ArraySort __iruid_1001 __iruid_1002
+    (Let __iruid_1003
+      (CollectDistributedArray table_coerce_sortedness
+        __iruid_1004 __iruid_1005
+        (ToStream False
+          (Literal
+            Array[Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}]
+            <literal value>))
+        (Literal Struct{} <literal value>)
+        (Let __iruid_1006
+          (RunAgg ((TypedStateSig +PInt64)
+              
+              (TakeByStateSig
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})
+              
+              (TakeByStateSig
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})
+              (TypedStateSig +PInt64)
+              (TypedStateSig +PInt64)
+              
+              (TakeByStateSig
+                +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                +PFloat64))
+            (Begin
+              (Begin
+                (InitOp 0 (Count (TypedStateSig +PInt64)) ())
+                (InitOp 1 
+                  (TakeBy 
+                    (TakeByStateSig
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                  ((I32 1)))
+                (InitOp 2 
+                  (TakeBy 
+                    (TakeByStateSig
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                  ((I32 1)))
+                (InitOp 3 (Sum (TypedStateSig +PInt64)) ())
+                (InitOp 4 (Sum (TypedStateSig +PInt64)) ())
+                (InitOp 5 
+                  (TakeBy 
+                    (TakeByStateSig
+                      +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                      +PFloat64))
+                  ((I32 20))))
+              (StreamFor __iruid_1007
+                (RunAggScan __iruid_1008 (
+                    (TypedStateSig
+                      PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                  (ReadPartition
+                    Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String]}
+                    "{\"category\":\"PartitionIteratorLongReader\",\"fullRowType\":\"Struct{locus:Locus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:Array[String],__row_uid:Tuple[Int64,Int64]}\",\"uidFieldName\":\"__row_uid\",\"contextType\":\"Struct{partitionIndex:Int32,fileNum:Int32,file:String,start:Int64,end:Int64,split:Boolean}\"}"
+                    (Ref __iruid_1004))
+                  (Begin
+                    (InitOp 0 
+                      (PrevNonnull 
+                        (TypedStateSig
+                          PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ()))
+                  (Begin
+                    (SeqOp 0 
+                      (PrevNonnull 
+                        (TypedStateSig
+                          PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ((Ref __iruid_1008))))
+                  (Let __iruid_1009
+                    (MakeTuple (0)
+                      (ResultOp 0 
+                        (PrevNonnull 
+                          (TypedStateSig
+                            PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))))
+                    (MakeStruct
+                      (key (Ref __iruid_1008))
+                      (token
+                        (ApplySeeded rand_unif 1 Float64
+                          (F64 0.0)
+                          (F64 1.0)
+                          (NA RNGState)))
+                      (prevkey
+                        (GetTupleElement 0 (Ref __iruid_1009))))))
+                (Let __iruid_1010
+                  (GetField key (Ref __iruid_1007))
+                  (Begin
+                    (SeqOp 0 (Count (TypedStateSig +PInt64)) ())
+                    (SeqOp 1 
+                      (TakeBy 
+                        (TakeByStateSig
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ((Ref __iruid_1010) (Ref __iruid_1010)))
+                    (SeqOp 2 
+                      (TakeBy 
+                        (TakeByStateSig
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}))
+                      ((Ref __iruid_1010) (Ref __iruid_1010)))
+                    (SeqOp 3 (Sum (TypedStateSig +PInt64))
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA (GetField prevkey (Ref __iruid_1007)))
+                            (ApplyComparisonOp LTEQ
+                              (GetField prevkey (Ref __iruid_1007))
+                              (GetField key (Ref __iruid_1007)))))))
+                    (SeqOp 4 (Sum (TypedStateSig +PInt64))
+                      ((Apply -1 toInt64 () Int64
+                          (ApplySpecial -1 lor () Boolean
+                            (IsNA
+                              (SelectFields ()
+                                (GetField prevkey (Ref __iruid_1007))))
+                            (ApplyComparisonOp LTEQ
+                              (SelectFields (locus)
+                                (GetField prevkey (Ref __iruid_1007)))
+                              (SelectFields (locus)
+                                (GetField key (Ref __iruid_1007))))))))
+                    (SeqOp 5 
+                      (TakeBy 
+                        (TakeByStateSig
+                          +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                          +PFloat64))
+                      ((GetField key (Ref __iruid_1007))
+                        (GetField token (Ref __iruid_1007))))))))
+            (MakeTuple (0 1 2 3 4 5)
+              (ResultOp 0 (Count (TypedStateSig +PInt64)))
+              (ResultOp 1 
+                (TakeBy 
+                  (TakeByStateSig
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})))
+              (ResultOp 2 
+                (TakeBy 
+                  (TakeByStateSig
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]})))
+              (ResultOp 3 (Sum (TypedStateSig +PInt64)))
+              (ResultOp 4 (Sum (TypedStateSig +PInt64)))
+              (ResultOp 5 
+                (TakeBy 
+                  (TakeByStateSig
+                    +PCStruct{locus:+PCLocus(Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa),alleles:+PCArray[+PCString]}
+                    +PFloat64)))))
+          (Let __iruid_1011
+            (GetTupleElement 0 (Ref __iruid_1006))
+            (MakeStruct
+              (n (Ref __iruid_1011))
+              (minkey (GetTupleElement 1 (Ref __iruid_1006)))
+              (maxkey (GetTupleElement 2 (Ref __iruid_1006)))
+              (ksorted
+                (ApplyComparisonOp EQ
+                  (GetTupleElement 3 (Ref __iruid_1006))
+                  (Ref __iruid_1011)))
+              (pksorted
+                (ApplyComparisonOp EQ
+                  (GetTupleElement 4 (Ref __iruid_1006))
+                  (Ref __iruid_1011)))
+              (sample (GetTupleElement 5 (Ref __iruid_1006))))))
+        (NA String))
+      (StreamMap __iruid_1012
+        (StreamFilter __iruid_1013
+          (StreamMap __iruid_1014
+            (StreamRange -1 False
+              (I32 0)
+              (ArrayLen (Ref __iruid_1003))
+              (I32 1))
+            (InsertFields
+              (ArrayRef -1
+                (Ref __iruid_1003)
+                (Ref __iruid_1014))
+              None
+              (i (Ref __iruid_1014))))
+          (ApplyComparisonOp GT
+            (ArrayLen (GetField minkey (Ref __iruid_1013)))
+            (I32 0)))
+        (InsertFields
+          (Ref __iruid_1012)
+          None
+          (minkey
+            (ArrayRef -1
+              (GetField minkey (Ref __iruid_1012))
+              (I32 0)))
+          (maxkey
+            (ArrayRef -1
+              (GetField maxkey (Ref __iruid_1012))
+              (I32 0))))))
+    (ApplyComparisonOp LT
+      (SelectFields (minkey maxkey) (Ref __iruid_1001))
+      (SelectFields (minkey maxkey)
+        (Ref __iruid_1002))))
+  (MakeStruct
+    (ksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_1015 __iruid_1016
+          (ToStream False (Ref __iruid_1000))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_1015)
+            (GetField ksorted (Ref __iruid_1016))))
+        (StreamFold __iruid_1017 __iruid_1018
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_1000))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_1017)
+            (ApplyComparisonOp LTEQ
+              (GetField maxkey
+                (ArrayRef -1
+                  (Ref __iruid_1000)
+                  (Ref __iruid_1018)))
+              (GetField minkey
+                (ArrayRef -1
+                  (Ref __iruid_1000)
+                  (ApplyBinaryPrimOp Add
+                    (Ref __iruid_1018)
+                    (I32 1)))))))))
+    (pksorted
+      (ApplySpecial -1 land () Boolean
+        (StreamFold __iruid_1019 __iruid_1020
+          (ToStream False (Ref __iruid_1000))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_1019)
+            (GetField pksorted (Ref __iruid_1020))))
+        (StreamFold __iruid_1021 __iruid_1022
+          (StreamRange -1 False
+            (I32 0)
+            (ApplyBinaryPrimOp Subtract
+              (ArrayLen (Ref __iruid_1000))
+              (I32 1))
+            (I32 1))
+          (True)
+          (ApplySpecial -1 land () Boolean
+            (Ref __iruid_1021)
+            (ApplyComparisonOp LTEQ
+              (SelectFields (locus)
+                (GetField maxkey
+                  (ArrayRef -1
+                    (Ref __iruid_1000)
+                    (Ref __iruid_1022))))
+              (SelectFields (locus)
+                (GetField minkey
+                  (ArrayRef -1
+                    (Ref __iruid_1000)
+                    (ApplyBinaryPrimOp Add
+                      (Ref __iruid_1022)
+                      (I32 1))))))))))
+    (sortedPartData (Ref __iruid_1000))))
+2022-11-01 16:36:07 root: ERROR: error while applying lowering 'LowerOrInterpretNonCompilable'
+2022-11-01 16:36:07 root: INFO: RegionPool: FREE: 128.0K allocated (128.0K blocks / 0 chunks), regions.size = 2, 0 current java objects, thread 15: Thread-4
+2022-11-01 16:36:08 root: ERROR: RuntimeException: genName has invalid character(s): RGContainer_Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa
+From java.lang.RuntimeException: genName has invalid character(s): RGContainer_Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/GWAS/Schizosaccharomyces_pombe_all_chromosomes.fa
+	at is.hail.lir.package$.genName(package.scala:14)
+	at is.hail.asm4s.package$.genName(package.scala:70)
+	at is.hail.expr.ir.EmitModuleBuilder.genEmitClass(EmitClassBuilder.scala:30)
+	at is.hail.expr.ir.EmitModuleBuilder.$anonfun$getReferenceGenome$1(EmitClassBuilder.scala:56)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at is.hail.expr.ir.EmitModuleBuilder.getReferenceGenome(EmitClassBuilder.scala:55)
+	at is.hail.expr.ir.WrappedEmitModuleBuilder.getReferenceGenome(EmitClassBuilder.scala:81)
+	at is.hail.expr.ir.WrappedEmitModuleBuilder.getReferenceGenome$(EmitClassBuilder.scala:81)
+	at is.hail.expr.ir.EmitMethodBuilder.getReferenceGenome(EmitClassBuilder.scala:900)
+	at is.hail.expr.ir.orderings.LocusOrdering$$anon$1._compareNonnull(LocusOrdering.scala:21)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compareNonnull$1(CodeOrdering.scala:128)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$2(CodeOrdering.scala:100)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$1(CodeOrdering.scala:97)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$1$adapted(CodeOrdering.scala:95)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrGenEmitMethod$1(EmitClassBuilder.scala:748)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at is.hail.expr.ir.EmitClassBuilder.getOrGenEmitMethod(EmitClassBuilder.scala:746)
+	at is.hail.expr.ir.orderings.CodeOrdering.checkedSCode(CodeOrdering.scala:95)
+	at is.hail.expr.ir.orderings.CodeOrdering.compareNonnull(CodeOrdering.scala:128)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$_compare$6(CodeOrdering.scala:191)
+	at is.hail.asm4s.CodeBuilderLike.ifx(CodeBuilder.scala:97)
+	at is.hail.asm4s.CodeBuilderLike.ifx$(CodeBuilder.scala:88)
+	at is.hail.expr.ir.EmitCodeBuilder.ifx(EmitCodeBuilder.scala:38)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$_compare$4(CodeOrdering.scala:191)
+	at is.hail.asm4s.CodeBuilderLike.ifx(CodeBuilder.scala:97)
+	at is.hail.asm4s.CodeBuilderLike.ifx$(CodeBuilder.scala:88)
+	at is.hail.expr.ir.EmitCodeBuilder.ifx(EmitCodeBuilder.scala:38)
+	at is.hail.expr.ir.orderings.CodeOrdering._compare(CodeOrdering.scala:191)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compare$1(CodeOrdering.scala:172)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compare$1$adapted(CodeOrdering.scala:172)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedEmitCode$2(CodeOrdering.scala:120)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedEmitCode$1(CodeOrdering.scala:117)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedEmitCode$1$adapted(CodeOrdering.scala:115)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrGenEmitMethod$1(EmitClassBuilder.scala:748)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at is.hail.expr.ir.EmitClassBuilder.getOrGenEmitMethod(EmitClassBuilder.scala:746)
+	at is.hail.expr.ir.orderings.CodeOrdering.checkedEmitCode(CodeOrdering.scala:115)
+	at is.hail.expr.ir.orderings.CodeOrdering.compare(CodeOrdering.scala:172)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrderingFunction$1(EmitClassBuilder.scala:511)
+	at is.hail.expr.ir.orderings.StructOrdering$$anon$1._compareNonnull(StructOrdering.scala:38)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compareNonnull$1(CodeOrdering.scala:128)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$2(CodeOrdering.scala:100)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$1(CodeOrdering.scala:97)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$1$adapted(CodeOrdering.scala:95)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrGenEmitMethod$1(EmitClassBuilder.scala:748)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at is.hail.expr.ir.EmitClassBuilder.getOrGenEmitMethod(EmitClassBuilder.scala:746)
+	at is.hail.expr.ir.orderings.CodeOrdering.checkedSCode(CodeOrdering.scala:95)
+	at is.hail.expr.ir.orderings.CodeOrdering.compareNonnull(CodeOrdering.scala:128)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$_compare$6(CodeOrdering.scala:191)
+	at is.hail.asm4s.CodeBuilderLike.ifx(CodeBuilder.scala:97)
+	at is.hail.asm4s.CodeBuilderLike.ifx$(CodeBuilder.scala:88)
+	at is.hail.expr.ir.EmitCodeBuilder.ifx(EmitCodeBuilder.scala:38)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$_compare$4(CodeOrdering.scala:191)
+	at is.hail.asm4s.CodeBuilderLike.ifx(CodeBuilder.scala:97)
+	at is.hail.asm4s.CodeBuilderLike.ifx$(CodeBuilder.scala:88)
+	at is.hail.expr.ir.EmitCodeBuilder.ifx(EmitCodeBuilder.scala:38)
+	at is.hail.expr.ir.orderings.CodeOrdering._compare(CodeOrdering.scala:191)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compare$1(CodeOrdering.scala:172)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compare$1$adapted(CodeOrdering.scala:172)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedEmitCode$2(CodeOrdering.scala:120)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedEmitCode$1(CodeOrdering.scala:117)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedEmitCode$1$adapted(CodeOrdering.scala:115)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrGenEmitMethod$1(EmitClassBuilder.scala:748)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at is.hail.expr.ir.EmitClassBuilder.getOrGenEmitMethod(EmitClassBuilder.scala:746)
+	at is.hail.expr.ir.orderings.CodeOrdering.checkedEmitCode(CodeOrdering.scala:115)
+	at is.hail.expr.ir.orderings.CodeOrdering.compare(CodeOrdering.scala:172)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrderingFunction$1(EmitClassBuilder.scala:511)
+	at is.hail.expr.ir.orderings.StructOrdering$$anon$1._compareNonnull(StructOrdering.scala:38)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$compareNonnull$1(CodeOrdering.scala:128)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$2(CodeOrdering.scala:100)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$1(CodeOrdering.scala:97)
+	at is.hail.expr.ir.orderings.CodeOrdering.$anonfun$checkedSCode$1$adapted(CodeOrdering.scala:95)
+	at is.hail.expr.ir.EmitClassBuilder.$anonfun$getOrGenEmitMethod$1(EmitClassBuilder.scala:748)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at is.hail.expr.ir.EmitClassBuilder.getOrGenEmitMethod(EmitClassBuilder.scala:746)
+	at is.hail.expr.ir.orderings.CodeOrdering.checkedSCode(CodeOrdering.scala:95)
+	at is.hail.expr.ir.orderings.CodeOrdering.compareNonnull(CodeOrdering.scala:128)
+	at is.hail.expr.ir.agg.TakeByRVAS.compareIndexedKey(TakeByAggregator.scala:63)
+	at is.hail.expr.ir.agg.TakeByRVAS.$anonfun$compareElt$1(TakeByAggregator.scala:217)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.agg.TakeByRVAS.<init>(TakeByAggregator.scala:215)
+	at is.hail.expr.ir.agg.AggStateSig$.getState(Extract.scala:65)
+	at is.hail.expr.ir.AggContainer$.$anonfun$fromBuilder$1(Emit.scala:123)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:198)
+	at is.hail.expr.ir.AggContainer$.fromBuilder(Emit.scala:123)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:2053)
+	at is.hail.expr.ir.Emit.emitI$3(Emit.scala:2555)
+	at is.hail.expr.ir.Emit.$anonfun$emit$22(Emit.scala:2638)
+	at is.hail.expr.ir.EmitCode$.fromI(Emit.scala:445)
+	at is.hail.expr.ir.Emit.emit(Emit.scala:2637)
+	at is.hail.expr.ir.Emit.emit$2(Emit.scala:2552)
+	at is.hail.expr.ir.Emit.$anonfun$emit$6(Emit.scala:2578)
+	at is.hail.expr.ir.EmitCode$.fromI(Emit.scala:445)
+	at is.hail.expr.ir.Emit.emit(Emit.scala:2577)
+	at is.hail.expr.ir.Emit.emitFallback$1(Emit.scala:811)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:2476)
+	at is.hail.expr.ir.Emit.$anonfun$emitSplitMethod$1(Emit.scala:591)
+	at is.hail.expr.ir.Emit.$anonfun$emitSplitMethod$1$adapted(Emit.scala:589)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedVoid(EmitCodeBuilder.scala:28)
+	at is.hail.expr.ir.EmitMethodBuilder.voidWithBuilder(EmitClassBuilder.scala:1007)
+	at is.hail.expr.ir.Emit.emitSplitMethod(Emit.scala:589)
+	at is.hail.expr.ir.Emit.emitInSeparateMethod(Emit.scala:606)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:793)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:786)
+	at is.hail.expr.ir.Emit.$anonfun$emitI$241(Emit.scala:2386)
+	at is.hail.expr.ir.EmitCode$.fromI(Emit.scala:445)
+	at is.hail.expr.ir.Emit.$anonfun$emitI$240(Emit.scala:2386)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.WrappedEmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1058)
+	at is.hail.expr.ir.WrappedEmitMethodBuilder.emitWithBuilder$(EmitClassBuilder.scala:1058)
+	at is.hail.expr.ir.EmitFunctionBuilder.emitWithBuilder(EmitClassBuilder.scala:1074)
+	at is.hail.expr.ir.Emit.$anonfun$emitI$238(Emit.scala:2361)
+	at is.hail.expr.ir.IEmitCodeGen.map(Emit.scala:336)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:2341)
+	at is.hail.expr.ir.streams.EmitStream$.is$hail$expr$ir$streams$EmitStream$$emit$1(EmitStream.scala:143)
+	at is.hail.expr.ir.streams.EmitStream$.$anonfun$produce$3(EmitStream.scala:202)
+	at is.hail.expr.ir.EmitCode$.fromI(Emit.scala:445)
+	at is.hail.expr.ir.streams.EmitStream$.produce(EmitStream.scala:202)
+	at is.hail.expr.ir.Emit.emitStream$2(Emit.scala:805)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:1124)
+	at is.hail.expr.ir.Emit.emitI$3(Emit.scala:2555)
+	at is.hail.expr.ir.Emit.$anonfun$emit$22(Emit.scala:2638)
+	at is.hail.expr.ir.EmitCode$.fromI(Emit.scala:445)
+	at is.hail.expr.ir.Emit.emit(Emit.scala:2637)
+	at is.hail.expr.ir.Emit.emit$2(Emit.scala:2552)
+	at is.hail.expr.ir.Emit.$anonfun$emit$6(Emit.scala:2578)
+	at is.hail.expr.ir.EmitCode$.fromI(Emit.scala:445)
+	at is.hail.expr.ir.Emit.emit(Emit.scala:2577)
+	at is.hail.expr.ir.Emit.emitFallback$1(Emit.scala:811)
+	at is.hail.expr.ir.Emit.emitI(Emit.scala:2476)
+	at is.hail.expr.ir.Emit$.$anonfun$apply$5(Emit.scala:78)
+	at is.hail.expr.ir.EmitCodeBuilder$.scoped(EmitCodeBuilder.scala:18)
+	at is.hail.expr.ir.EmitCodeBuilder$.scopedCode(EmitCodeBuilder.scala:23)
+	at is.hail.expr.ir.EmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1005)
+	at is.hail.expr.ir.WrappedEmitMethodBuilder.emitWithBuilder(EmitClassBuilder.scala:1058)
+	at is.hail.expr.ir.WrappedEmitMethodBuilder.emitWithBuilder$(EmitClassBuilder.scala:1058)
+	at is.hail.expr.ir.EmitFunctionBuilder.emitWithBuilder(EmitClassBuilder.scala:1074)
+	at is.hail.expr.ir.Emit$.apply(Emit.scala:75)
+	at is.hail.expr.ir.Compile$.apply(Compile.scala:78)
+	at is.hail.expr.ir.LoweredTableReader$.makeCoercer(TableIR.scala:329)
+	at is.hail.expr.ir.GenericTableValue.getLTVCoercer(GenericTableValue.scala:177)
+	at is.hail.expr.ir.GenericTableValue.toTableStage(GenericTableValue.scala:202)
+	at is.hail.io.vcf.MatrixVCFReader.lower(LoadVCF.scala:1831)
+	at is.hail.expr.ir.lowering.LowerTableIR$.applyTable(LowerTableIR.scala:743)
+	at is.hail.expr.ir.lowering.LowerTableIR$.lower$1(LowerTableIR.scala:493)
+	at is.hail.expr.ir.lowering.LowerTableIR$.apply(LowerTableIR.scala:709)
+	at is.hail.expr.ir.lowering.LowerToCDA$.lower(LowerToCDA.scala:73)
+	at is.hail.expr.ir.lowering.LowerToCDA$.apply(LowerToCDA.scala:18)
+	at is.hail.expr.ir.lowering.LowerToDistributedArrayPass.transform(LoweringPass.scala:77)
+	at is.hail.expr.ir.LowerOrInterpretNonCompilable$.evaluate$1(LowerOrInterpretNonCompilable.scala:27)
+	at is.hail.expr.ir.LowerOrInterpretNonCompilable$.rewrite$1(LowerOrInterpretNonCompilable.scala:67)
+	at is.hail.expr.ir.LowerOrInterpretNonCompilable$.apply(LowerOrInterpretNonCompilable.scala:72)
+	at is.hail.expr.ir.lowering.LowerOrInterpretNonCompilablePass$.transform(LoweringPass.scala:69)
+	at is.hail.expr.ir.lowering.LoweringPass.$anonfun$apply$3(LoweringPass.scala:16)
+	at is.hail.utils.ExecutionTimer.time(ExecutionTimer.scala:81)
+	at is.hail.expr.ir.lowering.LoweringPass.$anonfun$apply$1(LoweringPass.scala:16)
+	at is.hail.utils.ExecutionTimer.time(ExecutionTimer.scala:81)
+	at is.hail.expr.ir.lowering.LoweringPass.apply(LoweringPass.scala:14)
+	at is.hail.expr.ir.lowering.LoweringPass.apply$(LoweringPass.scala:13)
+	at is.hail.expr.ir.lowering.LowerOrInterpretNonCompilablePass$.apply(LoweringPass.scala:64)
+	at is.hail.expr.ir.lowering.LoweringPipeline.$anonfun$apply$1(LoweringPipeline.scala:15)
+	at is.hail.expr.ir.lowering.LoweringPipeline.$anonfun$apply$1$adapted(LoweringPipeline.scala:13)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:38)
+	at is.hail.expr.ir.lowering.LoweringPipeline.apply(LoweringPipeline.scala:13)
+	at is.hail.expr.ir.CompileAndEvaluate$._apply(CompileAndEvaluate.scala:47)
+	at is.hail.backend.spark.SparkBackend._execute(SparkBackend.scala:450)
+	at is.hail.backend.spark.SparkBackend.$anonfun$executeEncode$2(SparkBackend.scala:486)
+	at is.hail.backend.ExecuteContext$.$anonfun$scoped$3(ExecuteContext.scala:70)
+	at is.hail.utils.package$.using(package.scala:635)
+	at is.hail.backend.ExecuteContext$.$anonfun$scoped$2(ExecuteContext.scala:70)
+	at is.hail.utils.package$.using(package.scala:635)
+	at is.hail.annotations.RegionPool$.scoped(RegionPool.scala:17)
+	at is.hail.backend.ExecuteContext$.scoped(ExecuteContext.scala:59)
+	at is.hail.backend.spark.SparkBackend.withExecuteContext(SparkBackend.scala:339)
+	at is.hail.backend.spark.SparkBackend.$anonfun$executeEncode$1(SparkBackend.scala:483)
+	at is.hail.utils.ExecutionTimer$.time(ExecutionTimer.scala:52)
+	at is.hail.backend.spark.SparkBackend.executeEncode(SparkBackend.scala:482)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+2022-11-01 16:36:31 AbstractConnector: INFO: Stopped Spark@16f75fd{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-11-01 16:36:31 SparkUI: INFO: Stopped Spark web UI at http://eduroam-int-dhcp-97-180-2.ucl.ac.uk:4040
+2022-11-01 16:36:31 MapOutputTrackerMasterEndpoint: INFO: MapOutputTrackerMasterEndpoint stopped!
+2022-11-01 16:36:31 MemoryStore: INFO: MemoryStore cleared
+2022-11-01 16:36:31 BlockManager: INFO: BlockManager stopped
+2022-11-01 16:36:31 BlockManagerMaster: INFO: BlockManagerMaster stopped
+2022-11-01 16:36:31 OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: INFO: OutputCommitCoordinator stopped!
+2022-11-01 16:36:31 SparkContext: INFO: Successfully stopped SparkContext
+2022-11-01 16:36:31 SparkContext: INFO: SparkContext already stopped.
+2022-11-01 16:36:31 SparkContext: INFO: Running Spark version 3.1.3
+2022-11-01 16:36:31 ResourceUtils: INFO: ==============================================================
+2022-11-01 16:36:31 ResourceUtils: INFO: No custom resources configured for spark.driver.
+2022-11-01 16:36:31 ResourceUtils: INFO: ==============================================================
+2022-11-01 16:36:31 SparkContext: INFO: Submitted application: Hail
+2022-11-01 16:36:31 SparkContext: INFO: Spark configuration:
+spark.app.name=Hail
+spark.app.startTime=1667320591411
+spark.driver.extraClassPath=/Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar
+spark.driver.maxResultSize=0
+spark.executor.extraClassPath=./hail-all-spark.jar
+spark.hadoop.io.compression.codecs=org.apache.hadoop.io.compress.DefaultCodec,is.hail.io.compress.BGzipCodec,is.hail.io.compress.BGzipCodecTbi,org.apache.hadoop.io.compress.GzipCodec
+spark.hadoop.mapreduce.input.fileinputformat.split.minsize=0
+spark.jars=file:///Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar
+spark.kryo.registrator=is.hail.kryo.HailKryoRegistrator
+spark.kryoserializer.buffer.max=1g
+spark.logConf=true
+spark.master=local[*]
+spark.repl.local.jars=file:///Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+spark.ui.showConsoleProgress=false
+2022-11-01 16:36:31 ResourceProfile: INFO: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-11-01 16:36:31 ResourceProfile: INFO: Limiting resource is cpu
+2022-11-01 16:36:31 ResourceProfileManager: INFO: Added ResourceProfile id: 0
+2022-11-01 16:36:31 SecurityManager: INFO: Changing view acls to: bencekover
+2022-11-01 16:36:31 SecurityManager: INFO: Changing modify acls to: bencekover
+2022-11-01 16:36:31 SecurityManager: INFO: Changing view acls groups to: 
+2022-11-01 16:36:31 SecurityManager: INFO: Changing modify acls groups to: 
+2022-11-01 16:36:31 SecurityManager: INFO: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(bencekover); groups with view permissions: Set(); users  with modify permissions: Set(bencekover); groups with modify permissions: Set()
+2022-11-01 16:36:31 Utils: INFO: Successfully started service 'sparkDriver' on port 64090.
+2022-11-01 16:36:31 SparkEnv: INFO: Registering MapOutputTracker
+2022-11-01 16:36:31 SparkEnv: INFO: Registering BlockManagerMaster
+2022-11-01 16:36:31 BlockManagerMasterEndpoint: INFO: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-11-01 16:36:31 BlockManagerMasterEndpoint: INFO: BlockManagerMasterEndpoint up
+2022-11-01 16:36:31 SparkEnv: INFO: Registering BlockManagerMasterHeartbeat
+2022-11-01 16:36:31 DiskBlockManager: INFO: Created local directory at /private/var/folders/mb/vdj4y7t13zd3tzlk99b8ycd40000gn/T/blockmgr-f2e5dc59-79b2-4565-aec8-a49df2b84a7d
+2022-11-01 16:36:31 MemoryStore: INFO: MemoryStore started with capacity 366.3 MiB
+2022-11-01 16:36:31 SparkEnv: INFO: Registering OutputCommitCoordinator
+2022-11-01 16:36:31 Server: INFO: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_351-b10
+2022-11-01 16:36:31 Server: INFO: Started @1970189ms
+2022-11-01 16:36:31 AbstractConnector: INFO: Started ServerConnector@2cd88b41{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-11-01 16:36:31 Utils: INFO: Successfully started service 'SparkUI' on port 4040.
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@9edd846{/jobs,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@3b34f351{/jobs/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@60576cb6{/jobs/job,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@58d80cdb{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@798bce6e{/stages,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@73def662{/stages/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@67f292f0{/stages/stage,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@4c447d1c{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@11303773{/stages/pool,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5905c406{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@198ecef9{/storage,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6f01c8e4{/storage/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@26fc3d02{/storage/rdd,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@47d8fae8{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1f20bf39{/environment,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@430de74c{/environment/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1d1107cc{/executors,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@600a4673{/executors/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@673b6c98{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@161b5445{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@51d148d5{/static,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@3c2e5550{/,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1f1ab3b3{/api,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@f9044d0{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@235a8db{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-11-01 16:36:31 SparkUI: INFO: Bound SparkUI to 0.0.0.0, and started at http://eduroam-int-dhcp-97-180-2.ucl.ac.uk:4040
+2022-11-01 16:36:31 SparkContext: INFO: Added JAR file:///Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar at spark://eduroam-int-dhcp-97-180-2.ucl.ac.uk:64090/jars/hail-all-spark.jar with timestamp 1667320591411
+2022-11-01 16:36:32 Executor: INFO: Starting executor ID driver on host eduroam-int-dhcp-97-180-2.ucl.ac.uk
+2022-11-01 16:36:32 Utils: INFO: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 64091.
+2022-11-01 16:36:32 NettyBlockTransferService: INFO: Server created on eduroam-int-dhcp-97-180-2.ucl.ac.uk:64091
+2022-11-01 16:36:32 BlockManager: INFO: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-11-01 16:36:32 BlockManagerMaster: INFO: Registering BlockManager BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 64091, None)
+2022-11-01 16:36:32 BlockManagerMasterEndpoint: INFO: Registering block manager eduroam-int-dhcp-97-180-2.ucl.ac.uk:64091 with 366.3 MiB RAM, BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 64091, None)
+2022-11-01 16:36:32 BlockManagerMaster: INFO: Registered BlockManager BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 64091, None)
+2022-11-01 16:36:32 BlockManager: INFO: Initialized BlockManager: BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 64091, None)
+2022-11-01 16:36:32 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@330f1795{/metrics/json,null,AVAILABLE,@Spark}
+2022-11-01 16:36:32 Hail: INFO: SparkUI: http://eduroam-int-dhcp-97-180-2.ucl.ac.uk:4040

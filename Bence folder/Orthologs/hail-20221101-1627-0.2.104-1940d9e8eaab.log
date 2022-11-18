@@ -1,0 +1,92 @@
+2022-11-01 16:27:14 Hail: INFO: Running Hail version 0.2.104-1940d9e8eaab
+2022-11-01 16:27:15 SparkContext: WARN: Using an existing SparkContext; some configuration may not take effect.
+2022-11-01 16:29:02 AbstractConnector: INFO: Stopped Spark@227b885f{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-11-01 16:29:02 SparkUI: INFO: Stopped Spark web UI at http://eduroam-int-dhcp-97-180-2.ucl.ac.uk:4040
+2022-11-01 16:29:02 MapOutputTrackerMasterEndpoint: INFO: MapOutputTrackerMasterEndpoint stopped!
+2022-11-01 16:29:04 MemoryStore: INFO: MemoryStore cleared
+2022-11-01 16:29:04 BlockManager: INFO: BlockManager stopped
+2022-11-01 16:29:04 BlockManagerMaster: INFO: BlockManagerMaster stopped
+2022-11-01 16:29:04 OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: INFO: OutputCommitCoordinator stopped!
+2022-11-01 16:29:04 SparkContext: INFO: Successfully stopped SparkContext
+2022-11-01 16:29:04 SparkContext: INFO: SparkContext already stopped.
+2022-11-01 16:29:04 SparkContext: INFO: Running Spark version 3.1.3
+2022-11-01 16:29:04 ResourceUtils: INFO: ==============================================================
+2022-11-01 16:29:04 ResourceUtils: INFO: No custom resources configured for spark.driver.
+2022-11-01 16:29:04 ResourceUtils: INFO: ==============================================================
+2022-11-01 16:29:04 SparkContext: INFO: Submitted application: Hail
+2022-11-01 16:29:04 SparkContext: INFO: Spark configuration:
+spark.app.name=Hail
+spark.app.startTime=1667320144921
+spark.driver.extraClassPath=/Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar
+spark.driver.maxResultSize=0
+spark.executor.extraClassPath=./hail-all-spark.jar
+spark.hadoop.io.compression.codecs=org.apache.hadoop.io.compress.DefaultCodec,is.hail.io.compress.BGzipCodec,is.hail.io.compress.BGzipCodecTbi,org.apache.hadoop.io.compress.GzipCodec
+spark.hadoop.mapreduce.input.fileinputformat.split.minsize=0
+spark.jars=file:///Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar
+spark.kryo.registrator=is.hail.kryo.HailKryoRegistrator
+spark.kryoserializer.buffer.max=1g
+spark.logConf=true
+spark.master=local[*]
+spark.repl.local.jars=file:///Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+spark.ui.showConsoleProgress=false
+2022-11-01 16:29:04 ResourceProfile: INFO: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-11-01 16:29:04 ResourceProfile: INFO: Limiting resource is cpu
+2022-11-01 16:29:04 ResourceProfileManager: INFO: Added ResourceProfile id: 0
+2022-11-01 16:29:04 SecurityManager: INFO: Changing view acls to: bencekover
+2022-11-01 16:29:04 SecurityManager: INFO: Changing modify acls to: bencekover
+2022-11-01 16:29:04 SecurityManager: INFO: Changing view acls groups to: 
+2022-11-01 16:29:04 SecurityManager: INFO: Changing modify acls groups to: 
+2022-11-01 16:29:04 SecurityManager: INFO: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(bencekover); groups with view permissions: Set(); users  with modify permissions: Set(bencekover); groups with modify permissions: Set()
+2022-11-01 16:29:05 Utils: INFO: Successfully started service 'sparkDriver' on port 63899.
+2022-11-01 16:29:05 SparkEnv: INFO: Registering MapOutputTracker
+2022-11-01 16:29:05 SparkEnv: INFO: Registering BlockManagerMaster
+2022-11-01 16:29:05 BlockManagerMasterEndpoint: INFO: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-11-01 16:29:05 BlockManagerMasterEndpoint: INFO: BlockManagerMasterEndpoint up
+2022-11-01 16:29:05 SparkEnv: INFO: Registering BlockManagerMasterHeartbeat
+2022-11-01 16:29:05 DiskBlockManager: INFO: Created local directory at /private/var/folders/mb/vdj4y7t13zd3tzlk99b8ycd40000gn/T/blockmgr-8e3a8619-32b8-498e-ba83-e28b58dd1521
+2022-11-01 16:29:05 MemoryStore: INFO: MemoryStore started with capacity 366.3 MiB
+2022-11-01 16:29:05 SparkEnv: INFO: Registering OutputCommitCoordinator
+2022-11-01 16:29:05 Server: INFO: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_351-b10
+2022-11-01 16:29:05 Server: INFO: Started @1524027ms
+2022-11-01 16:29:05 AbstractConnector: INFO: Started ServerConnector@12822afe{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-11-01 16:29:05 Utils: INFO: Successfully started service 'SparkUI' on port 4040.
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@25bb504{/jobs,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2e43e6ce{/jobs/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5bfb9ff1{/jobs/job,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@68cab793{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@546a8252{/stages,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@42fba0e0{/stages/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5d2b2d5f{/stages/stage,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@3ab5cd8c{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@79811339{/stages/pool,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@7c20ade6{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5414b1f4{/storage,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2befac88{/storage/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1483492a{/storage/rdd,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5bbb756e{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@7e466e87{/environment,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@43902441{/environment/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6b95c008{/executors,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6b6d7507{/executors/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5da40478{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1bc8dd18{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5e698833{/static,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@725949e2{/,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5d32ad31{/api,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6258d0b4{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@688035d4{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 SparkUI: INFO: Bound SparkUI to 0.0.0.0, and started at http://eduroam-int-dhcp-97-180-2.ucl.ac.uk:4040
+2022-11-01 16:29:05 SparkContext: INFO: Added JAR file:///Users/bencekover/opt/anaconda3/lib/python3.9/site-packages/hail/backend/hail-all-spark.jar at spark://eduroam-int-dhcp-97-180-2.ucl.ac.uk:63899/jars/hail-all-spark.jar with timestamp 1667320144921
+2022-11-01 16:29:05 Executor: INFO: Starting executor ID driver on host eduroam-int-dhcp-97-180-2.ucl.ac.uk
+2022-11-01 16:29:05 Utils: INFO: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63900.
+2022-11-01 16:29:05 NettyBlockTransferService: INFO: Server created on eduroam-int-dhcp-97-180-2.ucl.ac.uk:63900
+2022-11-01 16:29:05 BlockManager: INFO: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-11-01 16:29:05 BlockManagerMaster: INFO: Registering BlockManager BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 63900, None)
+2022-11-01 16:29:05 BlockManagerMasterEndpoint: INFO: Registering block manager eduroam-int-dhcp-97-180-2.ucl.ac.uk:63900 with 366.3 MiB RAM, BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 63900, None)
+2022-11-01 16:29:05 BlockManagerMaster: INFO: Registered BlockManager BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 63900, None)
+2022-11-01 16:29:05 BlockManager: INFO: Initialized BlockManager: BlockManagerId(driver, eduroam-int-dhcp-97-180-2.ucl.ac.uk, 63900, None)
+2022-11-01 16:29:05 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@4566466e{/metrics/json,null,AVAILABLE,@Spark}
+2022-11-01 16:29:05 Hail: INFO: SparkUI: http://eduroam-int-dhcp-97-180-2.ucl.ac.uk:4040

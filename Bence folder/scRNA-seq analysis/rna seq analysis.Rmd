@@ -1,0 +1,252 @@
+---
+title: "Analysis of scRNA seq data - ATPIF1"
+author: "Bence Kover"
+date: "2022-08-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading in the libraries
+
+```{r, echo=FALSE}
+#BiocManager::install("topGO")
+#install.packages("org.Hs.eg.db")
+library(tidyverse)
+library(Seurat)
+library(SeuratData)
+library(patchwork)
+library(sctransform)
+library(readr)
+library(data.table)
+library(readxl)
+library(topGO)
+```
+
+## Loading in the first dataset - Bone marrow dataset 1 
+
+
+```{r, echo=FALSE}
+
+pombe_seq <- read_excel("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Saint_2019/rna_seq_pombe.xlsx",sheet="Table_S4")
+
+map <- fread("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/gene_IDs_names_products.tsv", header=F)
+```
+
+
+
+```{r, echo=FALSE}
+for (i in 1:length(pombe_seq$Systematic_ID)){
+  index = which(map$V1==pombe_seq$Systematic_ID[i])
+if (length(index) == 1){
+    if (map$V3[index] != ""){
+    pombe_seq$Systematic_ID[i] = map$V3[index]
+}}
+}
+
+
+pombe_seq_obj <- CreateSeuratObject(counts = pombe_seq[,-1],row.names=pombe_seq$Systematic_ID )
+```
+
+```{r, echo=FALSE}
+VlnPlot(pombe_seq_obj, features = c("nFeature_RNA", "nCount_RNA"), ncol = 2)
+
+```
+```{r, echo=FALSE}
+filter_data <-function(seuratobj){
+  min_feat = quantile(seuratobj[["nFeature_RNA"]]$nFeature_RNA, 0.2)
+  min_count = quantile(seuratobj[["nCount_RNA"]]$nCount_RNA, 0.2)
+  max_feat = quantile(seuratobj[["nFeature_RNA"]]$nFeature_RNA, 0.95)
+  max_count = quantile(seuratobj[["nCount_RNA"]]$nCount_RNA, 0.95)
+  
+  so <- subset(seuratobj, subset = nFeature_RNA > min_feat  &
+           nFeature_RNA < max_feat  &
+           nCount_RNA > min_count &
+           nCount_RNA < max_count)
+  return(so)
+
+
+}
+pombe_seq_obj <- filter_data(pombe_seq_obj)
+```
+
+```{r, echo=FALSE}
+VlnPlot(pombe_seq_obj, features = c("nFeature_RNA", "nCount_RNA"), ncol = 2)
+
+```
+
+```{r, echo=FALSE}
+  pombe_seq_obj<- pombe_seq_obj %>% NormalizeData()  %>%
+  FindVariableFeatures()%>%
+  ScaleData()%>%
+    RunPCA() %>%
+    FindNeighbors(dims = 1:30) %>%
+    RunUMAP(dims = 1:30) %>%
+    FindClusters()
+DefaultAssay(pombe_seq_obj) <- "RNA"
+print(FeaturePlot(pombe_seq_obj, reduction = "umap",features = c("gsf2")))
+```
+
+```{r, echo=FALSE}
+count_mat <- pombe_seq_obj[["RNA"]]@data
+
+matrix_mod<-as.matrix(count_mat) 
+rm(count_mat)
+
+gene<-as.numeric(matrix_mod["mbx2",])
+correlations_p<-apply(matrix_mod,1,function(x){cor.test(gene,x)$p.value})
+correlations_r<-apply(matrix_mod,1,function(x){cor.test(gene,x)$estimate})
+all.genes <- rownames(pombe_seq_obj)
+
+corr_tibb <-tibble(cor_p = correlations_p,
+                     cor_r = correlations_r, gene = all.genes,
+                     index = 1:length(all.genes))
+corr_tibb <- corr_tibb %>%
+  filter(gene!="mbx2")%>%
+  mutate(p_adj = cor_p*length(all.genes)) %>% arrange(p_adj) 
+
+
+print(corr_tibb)
+```
+
+
+```{r, echo=FALSE}
+count_mat <- pombe_seq_obj[["RNA"]]@data
+
+matrix_mod<-as.matrix(count_mat) 
+rm(count_mat)
+
+gene<-as.numeric(matrix_mod["gsf2",])
+correlations_p<-apply(matrix_mod,1,function(x){cor.test(gene,x)$p.value})
+correlations_r<-apply(matrix_mod,1,function(x){cor.test(gene,x)$estimate})
+all.genes <- rownames(pombe_seq_obj)
+
+corr_tibb <-tibble(cor_p = correlations_p,
+                     cor_r = correlations_r, gene = all.genes,
+                     index = 1:length(all.genes))
+corr_tibb <- corr_tibb %>%
+  filter(gene!="gsf2")%>%
+  mutate(p_adj = cor_p*length(all.genes)) %>% arrange(p_adj) 
+
+
+print(corr_tibb)
+```
+
+
+```{r, echo=FALSE}
+count_mat <- pombe_seq_obj[["RNA"]]@data
+
+matrix_mod<-as.matrix(count_mat) 
+rm(count_mat)
+
+gene<-as.numeric(matrix_mod["snf5",])
+correlations_p<-apply(matrix_mod,1,function(x){cor.test(gene,x)$p.value})
+correlations_r<-apply(matrix_mod,1,function(x){cor.test(gene,x)$estimate})
+all.genes <- rownames(pombe_seq_obj)
+
+corr_tibb <-tibble(cor_p = correlations_p,
+                     cor_r = correlations_r, gene = all.genes,
+                     index = 1:length(all.genes))
+corr_tibb <- corr_tibb %>%
+  filter(gene!="snf5")%>%
+  mutate(p_adj = cor_p*length(all.genes)) %>% arrange(p_adj) 
+
+
+print(corr_tibb)
+```
+
+
+```{r, echo=FALSE}
+count_mat <- pombe_seq_obj[["RNA"]]@data
+
+matrix_mod<-as.matrix(count_mat) 
+rm(count_mat)
+
+gene<-as.numeric(matrix_mod['SPNCRNA.1524',])
+correlations_p<-apply(matrix_mod,1,function(x){cor.test(gene,x)$p.value})
+correlations_r<-apply(matrix_mod,1,function(x){cor.test(gene,x)$estimate})
+all.genes <- rownames(pombe_seq_obj)
+
+corr_tibb <-tibble(cor_p = correlations_p,
+                     cor_r = correlations_r, gene = all.genes,
+                     index = 1:length(all.genes))
+corr_tibb <- corr_tibb %>%
+  filter(gene!='SPNCRNA.1524')%>%
+  mutate(p_adj = cor_p*length(all.genes)) %>% arrange(p_adj) 
+
+
+print(corr_tibb)
+```
+
+names(genes_named_vector) <- diff_exp_df$gene
+genes_named_vector[is.na(genes_named_vector)] <- 0
+
+GOdata <- new("topGOdata",
+              ontology = "BP", # use biological process ontology
+              allGenes = genes_named_vector ,
+              geneSel = function(x)(x>median(genes_named_vector)),
+              nodeSize = 5,
+              annot = annFUN.org, mapping = "org.Hs.eg.db", ID = "symbol")
+
+resultks <- runTest(GOdata, algorithm = "elim", statistic = "ks")
+gentab <- GenTable(GOdata, ks = resultks, topNodes = length(GOdata@graph@nodes), numChar = 80)
+gentab <- gentab %>% mutate( dataset="MELAS", cell="all" ) 
+
+GOdata2 <- new("topGOdata",
+              ontology = "CC", # CC
+              allGenes = genes_named_vector ,
+              geneSel = function(x)(x>median(genes_named_vector)),
+              nodeSize = 5,
+              annot = annFUN.org, mapping = "org.Hs.eg.db", ID = "symbol")
+
+resultks2 <- runTest(GOdata2, algorithm = "elim", statistic = "ks")
+gentab2 <- GenTable(GOdata2, ks = resultks2, topNodes = length(GOdata2@graph@nodes), numChar = 80)
+
+gentab2 <- gentab2 %>% mutate( dataset=" MELAS", cell="all" ) 
+
+GOdata3 <- new("topGOdata",
+              ontology = "MF", # MF
+              allGenes = genes_named_vector ,
+              geneSel = function(x)(x>median(genes_named_vector)),
+              nodeSize = 5,
+              annot = annFUN.org, mapping = "org.Hs.eg.db", ID = "symbol")
+
+resultks3 <- runTest(GOdata3, algorithm = "elim", statistic = "ks")
+gentab3 <- GenTable(GOdata3, ks = resultks3, topNodes = length(GOdata3@graph@nodes), numChar = 80)
+gentab3 <- gentab3 %>% mutate( dataset="MELAS", cell="all" ) 
+
+
+genes1<- genesInTerm(GOdata)
+gentab$genes<- genes1
+for (i in 1:length(gentab$GO.ID)){
+a=gentab$GO.ID[i]
+gentab$genes[i] = genes1[a]
+}
+
+genes2<- genesInTerm(GOdata2)
+gentab2$genes2<- genes2
+for (i in 1:length(gentab2$GO.ID)){
+a=gentab2$GO.ID[i]
+gentab2$genes2[i] = genes2[a]
+}
+
+genes3<- genesInTerm(GOdata3)
+gentab3$genes3<- genes3
+for (i in 1:length(gentab3$GO.ID)){
+a=gentab3$GO.ID[i]
+gentab3$genes3[i] = genes3[a]
+}
+
+
+gentab_fin <- bind_rows(gentab,gentab2,gentab3) %>% mutate(p_adj = p.adjust(ks), method="bonferroni") %>% group_by(GO.ID)%>% filter(p_adj <0.05)
+print(gentab_fin)
+gentab_fin <- apply(gentab_fin,2,as.character)
+write.csv(gentab_fin,"MELAS_GO.csv")
+
+
+
+
+```
+
