@@ -1,12 +1,20 @@
 #install.packages("/Users/bencekover/Downloads/RFQTL.tar.gz", repos = NULL)
-library(RFQTL)
 #install.packages("randomForest")
-library(randomForest)
 
+library(RFQTL)
+
+library(randomForest)
+1+1
 library(qqman)
 #loading in the genotype presence-absence matrix
-d<-read.table(file = '/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/SupplementaryDataset_S7_genotype.tsv', sep = '\t', header = TRUE)
-genotype1<-d[,-c(1:4)]vi
+
+
+#d<-read.table(file = '/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/SupplementaryDataset_S7_genotype.tsv', sep = '\t', header = TRUE)
+
+d<-read.table(file = '/Users/bencekover/bioinformatics/projects/segregants/updated_genotype_matrix.tsv', sep = '\t', header = TRUE)
+
+
+genotype1<-d[,-c(1:4)]
 genotype1<-data.matrix(genotype1)
 genotype1<-t(genotype1)
 #loading in the washing_phenotype measurements
@@ -18,6 +26,7 @@ phenotype1 <- phenotype1$ratio
 sampleInfo1 <- sapply(strainNames1,FUN=function(x){
   which(rownames(genotype1)==x)
 })
+mode(genotype1) <- "integer"
 mappingData1 <- preMap(genotype=genotype1,
                       phenotype=phenotype1,
                       sampleInfo=sampleInfo1,
@@ -31,23 +40,23 @@ r=rfMapper(mappingData = mappingData1,
              nforest = 100,#was 100
              ntree = 100)
 
-#Get accurate p-values by doing 3500 permutations (100x35)
+#Get accurate p-values by doing 10000 permutations (100x35)
 #Here the wd is a folder in which your permutations will go
-setwd("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/permutations/permutations")
+setwd("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/permutations/permutations_new")
 
 permutedScores1 <- rfMapper(mappingData = mappingData1,
                             permute = T,
                             nforest = 100,#was 100
                             ntree = 100,
-                            nPermutations=10000, #was 100
+                            nPermutations=20000, #was 100
                             file="wash_permut.RData",
-                            nCl=6,
+                            nCl=4,
                             clType="SOCK")
 
 #Below the wd is the folder in which the permutations folder is (not IN the permutation folder)
-setwd("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/permutations")
+setwd("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/permutations/")
 #The path below is the permutations folder
-pValues1 <- pEst(path="permutations/",
+pValues1 <- pEst(path="permutations_new/",
                 scores=r,
                 markersPerIteration = 350,
                 printProg = T,
@@ -56,14 +65,16 @@ pValuesX1 <- pValues1[mappingData1$genotype2group]
 
 #These steps (until markerPositions) are not useful for the way I presented the results
 chrVec1 <- d$chromosome
+
 QTL_list1 <- QTLgrouper(pmat = pValuesX1,
-                       sigThreshold = 0.01,
-                       corThreshold = 0.99,
-                       distThreshold = 1,
+                       sigThreshold = 0.001,
+                       corThreshold = 0.90,
+                       distThreshold = 10000,
                        genotype = genotype1,
                        chrVec = chrVec1)
 
 #Plotting the marker positions
+
 markerPositions1 <- d[,c(1,2)]
 markerPositions1$chromosome<-gsub("chromosome_1",1,markerPositions1$chromosome)
 markerPositions1$chromosome<-gsub("chromosome_2",2,markerPositions1$chromosome)
@@ -72,8 +83,8 @@ markerPositions1[,3]=markerPositions1$position
 
 
 #the writeQTL is what is in the tutorial but I didn't find it useful as a visualisation of results
-writeQTL(QTLlist = QTL_list1,traitNames = "Flocc",markerPositions = markerPositions1,path="myResults1.qtl")
-qtl1 <- readQTL(path = "myResults1.qtl")
+writeQTL(QTLlist = QTL_list1,traitNames = "Flocc",markerPositions = markerPositions1,path="myResults_new.qtl")
+qtl1 <- readQTL(path = "myResults_new.qtl")
 qtl1
 
 
@@ -96,17 +107,17 @@ results.tab[,4]=rep("snp",length(results.tab$CHR))
 colnames(results.tab)[4]="SNP"
 manhattan(results.tab,ylim = c(0,7), suggestiveline = F, genomewideline = F,cex = 0.7)
 abline(h=-log10(0.05/length(pValues1)),col="red")
-text(x=1,y=-log10(0.05/length(pValues1))+0.1,labels="       p=0.00001",col="red",cex=0.7)
+text(x=200,y=-log10(0.05/length(pValues1))+0.15,labels="                   p=7.2e-05",col="red",cex=0.7)
 
 #from the following, determine the regions to use for reg_map below
-snps = markerPositions1[which(-log10(pValuesX1)>=2.5),] 
+snps = markerPositions1[which(-log10(pValuesX1)>=3.5),] 
 results = d[row.names(snps),]
-write.csv(results,"results.csv")
+write.csv(results,"results_new.csv")
 plot(genotype1[,qtl1[[1]]$mostSignificantPredictor], phenotype1)
-plot(genotype1[,qtl1[[2]]$mostSignificantPredictor], phenotype1)
+plot(genotype1[,qtl1[[4]]$mostSignificantPredictor], phenotype1)
 
 
-d[qtl1[[2]]$predictors,]
+d[qtl1[[4]]$predictors,]
 
 #manually
 #mapping regions on chromosomes
@@ -115,10 +126,10 @@ start=c(1,1,1)
 end=c(5579133,4539804,2452883)
 chr_map=matrix(c(chromosomes, start, end), ncol=3, byrow=F)
 chr_map=data.frame(chr_map)
-regions=c("1","2","3","4","5")
-chr_names=c("chr1","chr2","chr2","chr2","chr3")
-reg_start=c(2055773,2202682,2334988,2516209,210341)
-reg_end=c(2055773,2202682,2363654,2640722,210364)
+regions=c("1")
+chr_names=c("chr2")
+reg_start=c(2528629)
+reg_end=c(2536217)
 reg_map=matrix(c(regions,chr_names, reg_start, reg_end), ncol=4, byrow=F)
 reg_map=data.frame(reg_map)
 write.table(chr_map,"chr_map.txt",sep="\t",col.names=F,row.names=F)

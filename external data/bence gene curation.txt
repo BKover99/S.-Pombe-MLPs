@@ -29,8 +29,12 @@ SPBC21B10.13c	yox1	MBF complex corepressor Yox1
 SPAC688.08	srb8	mediator complex subunit Med12
 SPAC589.02c	med13	mediator complex subunit Med13
 SPAC23H4.17c	srb10	"mediator complex, cyclin-dependent protein kinase subunit Srb10"
-SPAC18B11.10	tup11	transcriptional corepressor Tup11
-SPAC630.14c	tup12	transcriptional corepressor Tup12
 SPAC4G8.03c	puf5	pumilio family RNA-binding protein Puf5
 SPCC1672.06c	asp1	diphosphoinositol pentakisphosphate kinase/IP8 pyrophosphatase
 SPAC2F7.08c	snf5	SWI/SNF complex subunit Snf5
+SPCC1753.02c	git3	G-protein coupled receptor Git3
+SPAC23H3.13c	gpa2	heterotrimeric G protein alpha-2 subunit Gpa2
+SPBC32H8.07	git5	heterotrimeric G protein beta (WD repeat) subunit Git5
+SPBC215.04	git11	heterotrimeric G protein gamma subunit Git11
+SPBC19C7.03	cyr1	adenylate cyclase
+SPBC106.10	pka1	cAMP-dependent protein kinase catalytic subunit Pka1
