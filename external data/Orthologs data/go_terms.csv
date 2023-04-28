@@ -1,0 +1,22 @@
+,0
+GO:0000128,flocculation
+GO:0098609,cell-cell adhesion
+GO:0007155,cell adhesion
+GO:0060256,regulation of flocculation
+GO:0001403,invasive growth in response to glucose limitation
+GO:2000218,negative regulation of invasive growth in response to glucose limitation
+GO:2000219,positive regulation of invasive growth in response to glucose limitation
+GO:0030447,filamentous growth
+GO:0060257,negative regulation of flocculation
+GO:1900735,positive regulation of flocculation
+GO:0062040,fungal biofilm matrix
+GO:0042710,biofilm formation
+GO:0043709,cell adhesion involved in single-species biofilm formation
+GO:0043710,cell adhesion involved in multi-species biofilm formation
+GO:1900189,positive regulation of cell adhesion involved in single-species biofilm formation
+GO:1900231,regulation of single-species biofilm formation on inanimate substrate
+GO:0044011,single-species biofilm formation on inanimate substrate
+GO:0090606,single-species surface biofilm formation
+GO:0050839,cell adhesion molecule binding
+GO:0007160,cell-matrix adhesion
+GO:0010811,positive regulation of cell-substrate adhesion

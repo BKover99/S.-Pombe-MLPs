@@ -1,0 +1,62 @@
+,gene,before_wash,plate,color,position,ratio,median_or_mean,384_row,384_col,coord,name,function
+0,SPAC23H3.03c,0.15760869565217392,1,green,B_12_,0.8198372723750483,median,[4],[24],1_[4]_[24],npr2,GATOR1-SEACIT GTPase complex subunit Npr2
+1,SPAC26F1.03,0.57847533632287,7,blue,E_1_,0.7596899224806203,median,[9],[2],7_[9]_[2],pda1,pyruvate dehydrogenase e1 component alpha subunit Pda1
+2,SPBC2G2.13c,0.5291479820627804,7,blue,B_2_,0.6440677966101693,median,[3],[4],7_[3]_[4],dcd1,deoxycytidylate deaminase
+3,SPAC13D6.01,0.4311111111111111,5,blue,A_1_,0.6297522974296776,median,[1],[2],5_[1]_[2],pof14,F-box protein Pof14
+4,SPAC959.08,0.25118483412322273,6,red,C_2_,0.5772641509433962,median,[5],[3],6_[5]_[3],rpl2102,60S ribosomal protein L21
+5,SPBC405.07,0.48908296943231444,6,blue,H_12_,0.5695123939986954,median,[15],[24],6_[15]_[24],rpl3602,60S ribosomal protein L36
+6,SPAC637.09,0.18385650224215247,7,blue,B_1_,0.5121951219512195,median,[3],[2],7_[3]_[2],rex1,3'-5'- exoribonuclease Rex1
+7,SPAC144.01,0.11594202898550726,7,green,H_8_,0.5050675675675677,median,[16],[16],7_[16]_[16],,Schizosaccharomyces specific protein
+8,SPAC977.14c,0.37777777777777777,5,blue,C_1_,0.49108331115251536,median,[5],[2],5_[5]_[2],,"aldo/keto reductase, predicted calcium channel regulator"
+9,SPAC23H4.10c,0.14285714285714288,5,red,D_12_,0.48514851485148514,median,[7],[23],5_[7]_[23],thi4,bifunctional thiamine-phosphate dipyrophosphorylase/hydroxyethylthiazole kinase
+10,SPAC22A12.03c,0.42666666666666675,5,blue,B_1_,0.4772341628959275,median,[3],[2],5_[3]_[2],csn4,COP9/signalosome complex subunit Csn4
+11,SPAC1783.04c,0.37668161434977576,7,blue,D_8_,0.45238095238095244,median,[7],[16],7_[7]_[16],hst4,"histone deacetylase, Sirtuin family, NAD-dependent Hst4"
+12,SPBC691.04,0.3084577114427861,3,green,H_7_,0.4449715370018975,median,[16],[14],3_[16]_[14],mss116,mitochondrial ATP-dependent RNA helicase Mss116
+13,SPBC354.05c,0.26190476190476186,3,yellow,B_3_,0.39160839160839156,median,[4],[5],3_[4]_[5],sre2,"DNA-binding transcription factor, membrane-tethered Sre2"
+14,SPAC3H1.04c,0.38495575221238937,6,green,D_12_,0.3621794871794872,median,[8],[24],6_[8]_[24],mdm31,"mitochondrial inner membrane protein Mdm31, unknown biological role, interacts with ERMES"
+15,SPCC895.07,0.2242152466367713,7,blue,B_4_,0.32000000000000006,median,[3],[8],7_[3]_[8],alp14,TOG/XMAP215 microtubule plus end tracking polymerase Alp14
+16,SPAC1D4.06c,0.39336492890995267,4,red,D_3_,0.3040871620453104,median,[7],[5],4_[7]_[5],csk1,cyclin-dependent kinase activating kinase Csk1
+17,SPBC83.16c,0.4177777777777778,5,blue,D_1_,0.2816020025031289,median,[7],[2],5_[7]_[2],,protein with a role in clearing protein aggregates
+18,SPAPB1E7.12,0.38565022421524664,7,blue,B_12_,0.27906976744186046,median,[3],[24],7_[3]_[24],rps602,40S ribosomal protein S6
+19,SPAC1B2.04,0.12962962962962965,1,yellow,G_6_,0.27272727272727254,median,[14],[11],1_[14]_[11],cox6,cytochrome c oxidase subunit VI
+20,SPCC74.05,0.28712871287128716,1,blue,H_2_,0.2679045092838196,median,[15],[4],1_[15]_[4],rpl2702,60S ribosomal protein L27
+21,SPBP8B7.18c,0.1570680628272251,3,red,F_1_,0.24845528455284543,median,[11],[1],3_[11]_[1],,phosphomethylpyrimidine kinase
+22,SPAC323.05c,0.1592039800995025,3,green,C_2_,0.24632352941176466,median,[6],[4],3_[6]_[4],mtq2,eRF1 methyltransferase Mtq2
+23,SPAC13D6.02c,0.35111111111111115,5,blue,A_2_,0.2448593848444928,median,[1],[4],5_[1]_[4],byr3,"translational activator, zf-CCHC type zinc finger protein"
+24,SPCC188.07,0.55,6,yellow,G_1_,0.24350649350649348,median,[14],[1],6_[14]_[1],ccq1,shelterin complex HEAT repeat subunit Ccq1
+25,SPAC3H1.14,0.40888888888888897,5,blue,F_1_,0.23239228801888642,median,[11],[2],5_[11]_[2],gid4,GID complex subunit Gid4
+26,SPCC132.04c,0.13106796116504854,2,green,A_12_,0.22550629447181164,median,[2],[24],2_[2]_[24],gdh2,NAD-dependent glutamate dehydrogenase Gdh2
+27,SPAC3G9.07c,0.451063829787234,4,blue,H_1_,0.22069495432425507,median,[15],[2],4_[15]_[2],hos2,histone deacetylase (class I) Hos2
+28,SPAC13G6.09,0.1435185185185185,1,yellow,B_8_,0.2111436950146628,median,[4],[15],1_[4]_[15],trs402,SSU-rRNA maturation protein Tsr4 homolog 2 Tsr402
+29,SPCC11E10.08,0.1893203883495146,2,green,A_3_,0.2081596564355185,median,[2],[6],2_[2]_[6],rik1,CLRC ubiquitin ligase complex WD repeat protein Rik1
+30,SPAC2F7.07c,0.6086956521739131,7,green,H_10_,0.20720720720720717,median,[16],[20],7_[16]_[20],cph2,Clr6 histone deacetylase associated PHD-finger protein Cph2
+31,SPBC776.03,0.5752212389380531,6,green,H_8_,0.19223372781065087,median,[16],[16],6_[16]_[16],hom6,homoserine dehydrogenase Hom6
+32,SPAC14C4.10c,0.37777777777777777,5,blue,A_3_,0.19164226776683524,median,[1],[6],5_[1]_[6],,Nudix family hydrolase
+33,SPAC3H5.10,0.27631578947368424,5,yellow,D_9_,0.19131529263687855,median,[8],[17],5_[8]_[17],rpl3202,60S ribosomal protein L32
+34,SPAC17H9.19c,0.5671641791044777,3,green,A_2_,0.19014447884416924,median,[2],[4],3_[2]_[4],cdt2,WD repeat protein Cdt2
+35,SPBC29A3.13,0.6354166666666666,2,yellow,A_2_,0.18514946962391515,median,[2],[3],2_[2]_[3],pdp1,PWWP domain protein Pdp1
+36,SPCC1393.08,0.1142857142857143,5,red,C_3_,0.17326732673267317,median,[5],[5],5_[5]_[5],fil1,"DNA-binding transcription factor, zf-GATA type"
+37,SPBC1711.04,0.3187772925764192,6,blue,B_2_,0.1718896603490336,median,[3],[4],6_[3]_[4],mtd1,methylenetetrahydrofolate reductase Mtd1
+38,SPAC24C9.12c,0.18099547511312217,4,yellow,H_2_,0.17112831858407077,median,[16],[3],4_[16]_[3],shm1,serine hydroxymethyltransferase Shm1
+39,SPAC6B12.12,0.2127659574468085,4,blue,H_9_,0.17013574660633476,median,[15],[18],4_[15]_[18],tom70,mitochondrial TOM complex TPR repeat subunit Tom70
+40,SPBC660.14,0.44075829383886256,6,red,C_10_,0.0,control,[5],[19],6_[5]_[19],mik1,M phase inhibitor protein kinase Mik1
+41,SPBC530.04,0.5639810426540284,6,red,C_9_,0.0,control,[5],[17],6_[5]_[17],mod5,Tea1 anchoring protein Mod5
+42,SPAC2F3.02,0.6168478260869565,1,green,D_12_,0.0,control,[8],[24],1_[8]_[24],sec67,ER protein translocation subcomplex subunit Sec67
+43,SPAC26A3.01,0.12077008248906601,7,blue,E_4_,0.47881474418626,mean,[9],[8],7_[9]_[8],sxa1,aspartic protease Sxa1
+44,SPAC22E12.05c,0.26561316872427987,5,blue,B_2_,0.3917962869904455,mean,[3],[4],5_[3]_[4],rer1,Rer1 family protein
+45,SPBC365.03c,0.20268128970394345,5,green,B_12_,0.3127216755460554,mean,[4],[24],5_[4]_[24],rpl2101,60S ribosomal protein L21
+46,SPAC12B10.10,0.1572547265461919,7,green,G_6_,0.29815530384994376,mean,[14],[12],7_[14]_[12],nod1,medial cortical node Gef2-related protein Nod1
+47,SPAPB1A10.10c,0.2351023319615912,5,blue,C_2_,0.2839493927909204,mean,[5],[4],5_[5]_[4],ypt71,GTPase Ypt71
+48,SPAC22F3.09c,0.4238223660553757,5,green,H_10_,0.2777114554093574,mean,[16],[20],5_[16]_[20],res2,MBF transcription factor complex subunit Res2
+49,SPAC13C5.04,0.1681349794238683,5,blue,E_1_,0.27250125834046496,mean,[9],[2],5_[9]_[2],,"class I glutamine amidotransferase family protein, conserved in fungi, bacteria, plants"
+50,SPBC21H7.07c,0.4310640025990903,5,yellow,G_12_,0.26308439170541237,mean,[14],[23],5_[14]_[23],his5,imidazoleglycerol-phosphate dehydratase His5
+51,SPBC3B8.05,0.6316718874761992,3,green,F_12_,0.26299451331204626,mean,[12],[24],3_[12]_[24],dph1,diphthamide biosynthesis protein Dph1
+52,SPAC22E12.04,0.3953567136457993,6,green,H_12_,0.2538804442096714,mean,[16],[24],6_[16]_[24],ccs1,superoxide dismutase copper chaperone Ccs1
+53,SPAC23A1.14c,0.2800400548696845,5,blue,B_3_,0.25196703576737284,mean,[3],[6],5_[3]_[6],,"pyridoxal phosphate-dependent transferase, unknown specificity, implicated in sulfur compound metabolism"
+54,SPAC5D6.02c,0.5678392268588347,4,yellow,H_12_,0.2508248090161678,mean,[16],[23],4_[16]_[23],mug165,Clr6 histone deacetylase complex subunit Mug165
+55,SPCC1322.16,0.39397956954004154,6,green,H_9_,0.24942722508163795,mean,[16],[18],6_[16]_[18],phb2,prohibitin Phb2
+56,SPAC6G9.14,0.4745425629413985,6,blue,H_2_,0.24215748007584423,mean,[15],[4],6_[15]_[4],puf4,pumilio family RNA-binding protein Puf4
+57,SPCC1223.05c,0.5356574373726477,2,green,A_4_,0.2416501642401717,mean,[2],[8],2_[2]_[8],rpl3702,60S ribosomal protein L37
+58,SPBC23G7.12c,0.5630405643738977,3,yellow,A_1_,0.2336823630442305,mean,[2],[1],3_[2]_[1],rpt6,19S proteasome base subcomplex ATPase subunit Rpt6
+59,SPAC323.01c,0.10703536115300824,4,yellow,H_7_,0.2311995860562704,mean,[16],[13],4_[16]_[13],pos5,mitochondrial NADH kinase Pos5
+60,SPAC29A4.09,0.5183643371878666,4,yellow,H_5_,0.22794493907477092,mean,[16],[9],4_[16]_[9],rrp17,rRNA exonuclease Rrp17
