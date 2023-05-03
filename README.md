@@ -14,3 +14,4 @@ Contains all of our collected experimental data.
 ## External data
 Data used in the thesis from other publications.
 
+The repository is still under construction, and is not 100% finalised for my thesis.
