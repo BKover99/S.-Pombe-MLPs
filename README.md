@@ -20,8 +20,8 @@ The repository is still under construction, and is not 100% finalised for my the
 ### Goals
 
 - [x] Finishing thesis, and releasing the repo - May 5, 2023
-- [] Tidying up all analysis
-- [] Releasing the adhesion assay quantification code as a standalone package
-- [] Submitting our sequencing data
-- [] Releasing the repo as a model example for future reproducible S. pombe work
-- [] Publication of peer-reviewed research article
+- [ ] Tidying up all analysis
+- [ ] Releasing the adhesion assay quantification code as a standalone package
+- [ ] Submitting our sequencing data
+- [ ] Releasing the repo as a model example for future reproducible S. pombe work
+- [ ] Publication of peer-reviewed research article
