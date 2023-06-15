@@ -7,8 +7,8 @@ The structure of the repository is as follows:
 ### Bence folder
 Contains all the code to reproduce the analysis and plots found in the thesis.
 
-### Celeste original code
-Contains early code contributions from Celeste Elise Cohen (Summer student Bahler lab 2022).
+### yeastmlptrial
+Contains code under development for https://github.com/BKover99/yeastmlp
 
 ### Internal data
 Contains all of our collected experimental data.
