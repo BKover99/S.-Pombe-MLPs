@@ -20,8 +20,8 @@ Data used in the thesis from other publications.
 ### Goals
 
 - [x] Finishing thesis, and releasing the repo - May 5, 2023
-- [ ] Tidying up all analysis
-- [ ] Releasing the adhesion assay quantification code as a standalone package
+- [x] Releasing the MLP quantification code as a standalone package (See https://github.com/BKover99/yeastmlp) - Jun 15, 2023
+- [ ] Tidying up all analysis 
 - [ ] Submitting our sequencing data
 - [ ] Releasing the repo as a model example for future reproducible S. pombe work
 - [ ] Publication of peer-reviewed research article
