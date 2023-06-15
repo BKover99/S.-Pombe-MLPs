@@ -1,6 +1,7 @@
 library(affy)
+setwd("/Users/bencekover/Library/CloudStorage/OneDrive-Personal/MSci Bahler lab/S.-Pombe-MLPs")
 
-files = list.files("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/external data/Li et al 2013/GSE43248_RAW", 
+files = list.files("external data/Li et al 2013/GSE43248_RAW", 
     full.names = TRUE)
 affy.data = ReadAffy(filenames = files)
 eset.mas5 = mas5(affy.data)
@@ -27,63 +28,56 @@ data.mas5calls.calls = exprs(data.mas5calls)
 wt_mean = apply(exprSet[, c("WT1", "WT2", "WT3")], 1, mean)
 rpl3201_mean = apply(exprSet[, c("rpl3201_1", "rpl3201_2", "rpl3201_3")], 1, mean)
 rpl3202_mean = apply(exprSet[, c("rpl3202_1", "rpl3202_2", "rpl3202_3")], 1, mean)
+rpl_mean = apply(exprSet[, c("rpl3201_1", "rpl3201_2", "rpl3201_3","rpl3202_1", "rpl3202_2", "rpl3202_3")], 1, mean)
 
 #calc log fold difs
 wt_rpl3201 = rpl3201_mean - wt_mean
 wt_rpl3202 = rpl3202_mean - wt_mean 
 rpl3201_rpl3202 =  rpl3202_mean - rpl3201_mean
+wt_rpl = rpl_mean - wt_mean
 
 #all data to include means and logfold changes
-all.data = cbind(exprSet, wt_mean, rpl3201_mean, rpl3202_mean, wt_rpl3201, wt_rpl3202, rpl3201_rpl3202)
+all.data = cbind(exprSet, wt_mean, rpl3201_mean, rpl3202_mean, rpl_mean, wt_rpl3201, wt_rpl3202, rpl3201_rpl3202, wt_rpl)
 colnames(all.data)
 
 #now calculating p values for all genes. welch test two sided
 #iterate through table and do t test between columns
 wt_rpl3201_pval = c()
+wt_rpl3202_pval = c()
+rpl3201_rpl3202_pval = c()
+wt_rpl_pval = c()
+
+
 for (i in 1:length(exprSet[,1])) {
   wt_rpl3201_pval = c(wt_rpl3201_pval, t.test(exprSet[i,1:3], exprSet[i,4:6], var.equal = FALSE)$p.value)
-  #add name
-    
+  wt_rpl3202_pval = c(wt_rpl3202_pval, t.test(exprSet[i,1:3], exprSet[i,7:9], var.equal = FALSE)$p.value)
+  rpl3201_rpl3202_pval = c(rpl3201_rpl3202_pval, t.test(exprSet[i,7:9], exprSet[i,4:6], var.equal = FALSE)$p.value)
+  wt_rpl_pval = c(wt_rpl_pval, t.test(exprSet[i,1:3], exprSet[i,4:9], var.equal = FALSE)$p.value)
 }
-names(wt_rpl3201_pval) = rownames(exprSet)
-#show smallest p values
-sort(wt_rpl3201_pval)[1:10]
-#which gene
-names(sort(wt_rpl3201_pval)[1:10])
 
-# Concatenate all A/P calls for brain and liver
+
+names(wt_rpl3201_pval) = rownames(exprSet)
+
+
 AP = apply(data.mas5calls.calls, 1, paste, collapse = "")
 
-# Get the probsets where the 4 calls are not 'AAAA'
-genes.present = names(AP[AP != "AAAAAA"])
-# How many probetset/genes are present?
-length(genes.present)
+drop_na
 
-# Get all data for probesets that are present on at least on chip.
-exprSet.present = exprSet[genes.present, ]
-
-wt_rpl3201_pval_present =  wt_rpl3201_pval[genes.present]
-wt_rpl3202_pval_present =  wt_rpl3202_pval[genes.present]
-rpl3201_rpl3202_pval_present =  rpl3201_rpl3202[genes.present]
-
-
-wt_rpl3201_pval_present_adjusted= p.adjust(wt_rpl3201_pval_present, method = 'fdr')
+wt_rpl3201_pval_adjusted= p.adjust(wt_rpl3201_pval, method = 'fdr')
 
 #show hist of p values on log scale on 100 bins
 
-hist(log10(wt_rpl3201_pval_present), breaks = 100, col = "red", main = "p values for wt vs rpl3201", xlab = "p value")
-wt_rpl3202_pval_present_adjusted= p.adjust(wt_rpl3202_pval_present, method = 'fdr')
-rpl3201_rpl3202_pval_present_adjusted= p.adjust(rpl3201_rpl3202_pval_present, method = 'fdr')
+hist(wt_rpl3201_pval, breaks = 100, col = "red", main = "p values for wt vs rpl3201", xlab = "p value")
 
+wt_rpl3202_pval_adjusted= p.adjust(wt_rpl3202_pval, method = 'fdr')
+rpl3201_rpl3202_pval_adjusted= p.adjust(rpl3201_rpl3202_pval, method = 'fdr')
+wt_rpl_pval_adjusted = p.adjust(wt_rpl_pval, method = 'fdr')
 #now order these
 
-wt_rpl3201_pval_present_adjusted_ordered = wt_rpl3201_pval_present[order(wt_rpl3201_pval_present)]
-wt_rpl3202_pval_present_adjusted_ordered = wt_rpl3202_pval_present[order(wt_rpl3202_pval_present)]
-rpl3201_rpl3202_pval_present_adjusted_ordered = rpl3201_rpl3202_pval_present[order(rpl3201_rpl3202_pval_present)]
-
-
-wt_rpl3201_pval_present
-
+wt_rpl3201_pval_adjusted_ordered = wt_rpl3201_pval_adjusted[order(wt_rpl3201_pval_present)]
+wt_rpl3202_pval_adjusted_ordered = wt_rpl3202_pval_adjusted[order(wt_rpl3202_pval_present)]
+rpl3201_rpl3202_pval_adjusted_ordered = rpl3201_rpl3202_pval_adjusted[order(rpl3201_rpl3202_pval_present)]
+wt_rpl_pval_adjusted_ordered = wt_rpl_pval_adjusted[order(wt_rpl_pval_present)]
 
 
 hist(wt_rpl3201_pval_present_adjusted, breaks = 100, col = "red", main = "p values for wt vs rpl3201", xlab = "p value")
@@ -99,7 +93,7 @@ head(mapping_names)
 all.data = as.data.frame(all.data)
 
 #create new column
-all.data_final= cbind(gene = rownames(all.data), all.data)
+all.data_final= cbind(gene = rownames(all.data), p_val = wt_rpl_pval, all.data)
 
 #iterate through gene column in all.data, find the row in mappingnames that matches in the first column, and replace the gene with  the value in column Transcript ID(Array Design)
 for (i in 1:nrow(all.data_final)){
@@ -107,7 +101,7 @@ for (i in 1:nrow(all.data_final)){
 }
 
 #save as csv
-write.csv(all.data_final, file = "/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/Analysis of microarray datasets/li_final.csv")
+write.csv(all.data_final, file = "Bence folder/Analysis of microarray datasets/li_final.csv")
 
 
 all.data

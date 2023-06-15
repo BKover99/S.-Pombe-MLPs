@@ -1,0 +1,32 @@
+Systematic ID	Gene name	Product description
+SPBC15D4.02	gsf1	"DNA-binding transcription factor, zf-fungal binuclear cluster type Gsf1"
+SPAC1D4.11c	lkh1	dual specificity protein kinase Lkh1
+SPAC18B11.10	tup11	transcriptional corepressor Tup11
+SPAC630.14c	tup12	transcriptional corepressor Tup12
+SPBC29A10.08	gas2	"cell wall 1,3-beta-glucanosyltransferase Gas2"
+SPAC1002.13c	psu1	cell wall beta-glucosidase Psu1
+SPAC6F12.02	rst2	DNA-binding transcription factor Rst2
+SPCC736.08	cbf11	"DNA-binding transcription factor, CBF1/Su(H)/LAG-1 family Cbf11"
+SPBC354.05c	sre2	"DNA-binding transcription factor, membrane-tethered Sre2"
+SPBC15D4.02	gsf1	"DNA-binding transcription factor, zf-fungal binuclear cluster type Gsf1"
+SPAC1D4.11c	lkh1	dual specificity protein kinase Lkh1
+SPAC4H3.03c		"glucan 1,4-alpha-glucosidase"
+SPBC646.06c	agn2	"glucan endo-1,3-alpha-glucosidase Agn2"
+SPBC21B10.13c	yox1	MBF complex corepressor Yox1
+SPAC688.08	srb8	mediator complex subunit Med12
+SPAC589.02c	med13	mediator complex subunit Med13
+SPAC23H4.17c	srb10	"mediator complex, cyclin-dependent protein kinase subunit Srb10"
+SPAC4G8.03c	puf5	pumilio family RNA-binding protein Puf5
+SPCC1672.06c	asp1	diphosphoinositol pentakisphosphate kinase/IP8 pyrophosphatase
+SPAC2F7.08c	snf5	SWI/SNF complex subunit Snf5
+SPBC106.19	ppr10	mitochondrial PPR repeat protein Ppr10
+SPBC19G7.07c	ppr3	mitochondrial PPR repeat protein Ppr3
+SPAC8C9.06c	ppr4	mitochondrial Cox1 translation regulator Ppr4
+SPCC11E10.04	ppr6	mitochondrial PPR repeat protein Ppr6
+SPAPB1E7.11c	mpa1	mitochondrial translational activator, Mpa1
+SPAC9E9.11	plr1	pyridoxal reductase Plr1
+SPBC4F6.06	kin1	MARK/PAR-1 kinase Kin1
+SPAC4F10.10c	mnn9	Golgi mannan polymerase I complex subunit Mnn9
+SPCC188.02	par1	serine/threonine protein phosphatase PP2A regulatory subunit B-56 Par1
+SPBC1718.07c	zfs1	zf-CCCH tandem zinc finger protein, human Tristetraprolin homolog Zfs1, involved in mRNA catabolism
+SPBC1734.04	anp1	Golgi mannan polymerase I complex subunit Anp1
