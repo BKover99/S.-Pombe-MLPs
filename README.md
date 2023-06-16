@@ -23,5 +23,5 @@ Data used in the thesis from other publications.
 - [x] Releasing the MLP quantification code as a standalone package (See https://github.com/BKover99/yeastmlp) - Jun 15, 2023
 - [ ] Tidying up all analysis 
 - [ ] Submitting our sequencing data
-- [ ] Releasing the repo as a model example for future reproducible S. pombe work
+- [ ] Releasing the basic structure of the repo as a model example for future reproducible S. pombe work
 - [ ] Publication of peer-reviewed research article
