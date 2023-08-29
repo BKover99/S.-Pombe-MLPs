@@ -1,6 +1,5 @@
 # S.-Pombe-MLPs
-This repository contains all the code to produce the findings in my Master's thesis.
-
+This repository contains all the code to produce the findings in my Master's thesis and the subsequent research article.
 
 The structure of the repository is as follows:
 
@@ -19,8 +18,9 @@ Data used in the thesis from other publications.
 
 ### Goals
 
-- [x] Finishing thesis, and releasing the repo - May 5, 2023
+- [x] Finishing Master's thesis, and releasing the repo - May 5, 2023
 - [x] Releasing the MLP quantification code as a standalone package (See https://github.com/BKover99/yeastmlp) - Jun 15, 2023
+- [x] Finishing all experimental work and uploading all experimental data - Aug 29, 2023
 - [ ] Tidying up all analysis 
 - [ ] Submitting our sequencing data
 - [ ] Publication of peer-reviewed research article
