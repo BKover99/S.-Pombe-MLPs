@@ -3,7 +3,7 @@ library(DESeq2)
 library(tidyverse)
 BiocManager::available()
 
-setwd("/Users/bencekover/Library/CloudStorage/OneDrive-Personal/MSci Bahler lab/S.-Pombe-MLPs")
+setwd("/Users/bencekover/Library/CloudStorage/OneDrive-Personal/MSci Bahler lab/S.-Pombe-MLPs - Github")
 
 map = read.csv("Bence folder/Analysis of Clement-Ziza RNA-seq/DESeq2/map.csv",row.names="sample")
 map$snp = factor(map$snp)

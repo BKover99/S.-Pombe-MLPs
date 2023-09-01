@@ -1,2 +1,2 @@
 ,albicans_name(s),cerevisiae_name(s),pombe_name(s),albicans,cerevisiae,pombe,functional_orthopattern orthopattern,orthopattern,gene common name,pombe_function
-660,['C3_00670C_A' 'nan'],['YIL131C' 'YNL068C'],['SPBC16G5.15c'],1.0,1.0,1.0,7.0,7.0,['fkh2'],['DNA-binding forkhead transcription factor Fkh2']
+659,['C3_00670C_A' 'nan'],['YIL131C' 'YNL068C'],['SPBC16G5.15c'],1.0,1.0,1.0,7.0,7.0,['fkh2'],['DNA-binding forkhead transcription factor Fkh2']

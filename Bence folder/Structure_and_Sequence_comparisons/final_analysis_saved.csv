@@ -1,0 +1,301 @@
+uniprot_id,gene_name,score,e_value,unique_conserved,data_source,species,color
+Q9P7Q2,SPAC186.01,0.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+Q92340,SPAC1F8.02c,59.0,100.0,unique,BlastP,S. cerevisiae,False
+Q92344,SPAC1F8.06,0.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+Q10211,SPAC4H3.03c,72.0,17.7122,unique,BlastP,S. cerevisiae,False
+P0CU05,SPAC977.07c,59.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+Q9HDY9,SPAP11E10.02c,0.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+Q8TFG9,SPAPB15E9.01c,111.0,0.00131248,unique,BlastP,S. cerevisiae,True (n=14)
+Q9C0Z8,SPAPB1E7.11c,61.0,100.0,unique,BlastP,S. cerevisiae,False
+Q9C0Y2,SPAPB2C8.01,166.0,5.32609e-10,unique,BlastP,S. cerevisiae,True (n=14)
+Q10340,SPBC106.19,62.0,100.0,unique,BlastP,S. cerevisiae,False
+Q9URU4,SPBC1289.15,279.0,2.86622e-23,unique,BlastP,S. cerevisiae,True (n=14)
+P0CU04,SPBC1348.08c,59.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+O74308,SPBC15D4.02,142.0,7.38255e-08,unique,BlastP,S. cerevisiae,False
+O94309,SPBC215.04,47.0,100.0,unique,BlastP,S. cerevisiae,False
+O74346,SPBC21D10.06c,0.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+O43019,SPBC354.05c,191.0,8.83257e-14,unique,BlastP,S. cerevisiae,False
+Q9P5N1,SPBC359.04c,73.0,7.45392,unique,BlastP,S. cerevisiae,True (n=14)
+O94510,SPBC646.06c,0.0,100.0,unique,BlastP,S. cerevisiae,False
+Q874R4,SPBC947.04,0.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+Q96WV6,SPBPJ4664.02,109.0,0.00986924,unique,BlastP,S. cerevisiae,True (n=14)
+O74412,SPCC1223.13,0.0,100.0,unique,BlastP,S. cerevisiae,False
+Q9P6S0,SPCC1742.01,119.0,0.000244881,unique,BlastP,S. cerevisiae,True (n=14)
+Q7Z9I1,SPCC188.09c,0.0,100.0,unique,BlastP,S. cerevisiae,True (n=14)
+O74954,SPCC736.08,66.0,100.0,unique,BlastP,S. cerevisiae,False
+O94532,SPCC895.05,336.0,7.41169e-30,unique,BlastP,S. cerevisiae,False
+Q9UST7,SPBC336.07,299.0,9.5634e-26,conserved,BlastP,S. cerevisiae,False
+O74173,SPCC1450.04,408.0,6.96575e-49,conserved,BlastP,S. cerevisiae,False
+O13814,SPAC17H9.17c,399.0,1.64219e-42,conserved,BlastP,S. cerevisiae,False
+Q10251,SPAC56F8.03,2272.0,1e-149,conserved,BlastP,S. cerevisiae,False
+Q9USK1,SPCC4B3.11c,209.0,2.50968e-21,conserved,BlastP,S. cerevisiae,False
+O42858,SPAC23H3.05c,573.0,2.74025e-68,conserved,BlastP,S. cerevisiae,False
+Q92372,SPBC660.13c,1066.0,1.64664e-136,conserved,BlastP,S. cerevisiae,False
+O60132,SPBC1706.01,165.0,2.67218e-10,conserved,BlastP,S. cerevisiae,False
+Q9UTG6,SPAC1805.09c,202.0,3.65652e-16,conserved,BlastP,S. cerevisiae,False
+P27638,SPAC31G5.09c,1104.0,2.21983e-149,conserved,BlastP,S. cerevisiae,False
+P40377,SPBC4.04c,2582.0,1e-149,conserved,BlastP,S. cerevisiae,False
+O74946,SPCC553.09c,694.0,4.87664e-81,conserved,BlastP,S. cerevisiae,False
+Q9P4X4,SPAC959.02,584.0,4.28622e-73,conserved,BlastP,S. cerevisiae,False
+Q10325,SPAC17G8.13c,731.0,1.71756e-87,conserved,BlastP,S. cerevisiae,False
+Q9UUF1,SPBC17A3.08,570.0,4.16646e-69,conserved,BlastP,S. cerevisiae,False
+P24339,SPAC25G10.07c,1081.0,9.26434e-128,conserved,BlastP,S. cerevisiae,False
+Q9P7V9,SPBC1703.12,626.0,9.09247e-71,conserved,BlastP,S. cerevisiae,False
+O13651,SPBC8D2.06,3515.0,1e-149,conserved,BlastP,S. cerevisiae,False
+Q9URX8,SPAC890.06,1712.0,1e-149,conserved,BlastP,S. cerevisiae,False
+O60082,SPCC1494.08c,192.0,4.5994e-15,conserved,BlastP,S. cerevisiae,False
+Q8WZK1,SPBC839.09c,142.0,9.83991e-11,conserved,BlastP,S. cerevisiae,False
+O42893,SPBC660.07,2145.0,1e-149,conserved,BlastP,S. cerevisiae,False
+O14171,SPAC4D7.04c,530.0,2.42227e-65,conserved,BlastP,S. cerevisiae,False
+O60154,SPBC19C7.05,111.0,8.82701e-06,conserved,BlastP,S. cerevisiae,False
+Q9HDU5,SPBPB2B2.10c,1292.0,1e-149,conserved,BlastP,S. cerevisiae,False
+O42899,SPBC119.06,547.0,7.46799e-68,conserved,BlastP,S. cerevisiae,False
+Q9P381,SPBC13A2.03,1019.0,3.40715e-134,conserved,BlastP,S. cerevisiae,False
+O59780,SPCC320.03,183.0,2.57762e-12,conserved,BlastP,S. cerevisiae,False
+Q9URX7,SPAC890.07c,1013.0,9.70242e-137,conserved,BlastP,S. cerevisiae,False
+O74870,SPCC31H12.02c,204.0,7.60576e-17,conserved,BlastP,S. cerevisiae,False
+O74799,SPBC2D10.05,487.0,4.17329e-54,conserved,BlastP,S. cerevisiae,False
+O59800,SPCC550.02c,276.0,3.04713e-26,conserved,BlastP,S. cerevisiae,False
+Q9P7Q4,SPAC1834.11c,1999.0,1e-149,conserved,BlastP,S. cerevisiae,False
+Q09188,SPBC530.10c,1248.0,1e-149,conserved,BlastP,S. cerevisiae,False
+O13621,SPBC691.05c,298.0,2.24003e-26,conserved,BlastP,S. cerevisiae,False
+O94355,SPBC428.06c,70.0,9.33,conserved,BlastP,S. cerevisiae,False
+O42900,SPBC119.07,1160.0,1.14404e-131,conserved,BlastP,S. cerevisiae,False
+Q10248,SPAC4G9.20c,714.0,2.63884e-92,conserved,BlastP,S. cerevisiae,False
+O60184,SPBC23E6.09,1245.0,1e-149,conserved,BlastP,S. cerevisiae,False
+O43089,SPBC947.14c,50.0,100.0,conserved,BlastP,S. cerevisiae,False
+P40387,SPAC328.03,1743.0,1e-149,conserved,BlastP,S. cerevisiae,False
+P08463,SPBC1734.14c,394.0,4.53107e-49,conserved,BlastP,S. cerevisiae,False
+Q1MTN3,SPBC336.15,66.0,100.0,conserved,BlastP,S. cerevisiae,False
+P04551,SPBC11B10.09,1002.0,3.33503e-136,conserved,BlastP,S. cerevisiae,False
+Q9UUA4,SPBC409.21,66.0,22.9384,conserved,BlastP,S. cerevisiae,False
+O74416,SPCC14G10.03c,191.0,3.99649e-18,conserved,BlastP,S. cerevisiae,False
+O43017,SPBC354.03,328.0,8.31385e-32,conserved,BlastP,S. cerevisiae,False
+Q9USY7,SPBC1706.03,885.0,2.95785e-105,conserved,BlastP,S. cerevisiae,False
+Q9P6L7,SPAC688.09,789.0,9.9237e-102,conserved,BlastP,S. cerevisiae,False
+P40996,SPAC22H10.07,600.0,2.49549e-69,conserved,BlastP,S. cerevisiae,False
+Q9P7Q2,SPAC186.01,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q92340,SPAC1F8.02c,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+Q92344,SPAC1F8.06,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q10211,SPAC4H3.03c,323.0,2.916e-10,unique,Foldseek,S. cerevisiae,False
+P0CU05,SPAC977.07c,148.0,1.041e-05,unique,Foldseek,S. cerevisiae,True (n=14)
+Q9HDY9,SPAP11E10.02c,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q8TFG9,SPAPB15E9.01c,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q9C0Z8,SPAPB1E7.11c,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+Q9C0Y2,SPAPB2C8.01,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q10340,SPBC106.19,37.0,7.014,unique,Foldseek,S. cerevisiae,False
+Q9URU4,SPBC1289.15,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+P0CU04,SPBC1348.08c,144.0,5.992e-05,unique,Foldseek,S. cerevisiae,True (n=14)
+O74308,SPBC15D4.02,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+O94309,SPBC215.04,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+O74346,SPBC21D10.06c,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+O43019,SPBC354.05c,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+Q9P5N1,SPBC359.04c,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+O94510,SPBC646.06c,85.0,0.000812,unique,Foldseek,S. cerevisiae,False
+Q874R4,SPBC947.04,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q96WV6,SPBPJ4664.02,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+O74412,SPCC1223.13,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+Q9P6S0,SPCC1742.01,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+Q7Z9I1,SPCC188.09c,0.0,100.0,unique,Foldseek,S. cerevisiae,True (n=14)
+O74954,SPCC736.08,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+O94532,SPCC895.05,0.0,100.0,unique,Foldseek,S. cerevisiae,False
+Q9UST7,SPBC336.07,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+O74173,SPCC1450.04,523.0,1.863e-21,conserved,Foldseek,S. cerevisiae,False
+O13814,SPAC17H9.17c,1208.0,1.398e-32,conserved,Foldseek,S. cerevisiae,False
+Q10251,SPAC56F8.03,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+Q9USK1,SPCC4B3.11c,341.0,1.825e-11,conserved,Foldseek,S. cerevisiae,False
+O42858,SPAC23H3.05c,1407.0,1.831e-37,conserved,Foldseek,S. cerevisiae,False
+Q92372,SPBC660.13c,1789.0,2.035e-65,conserved,Foldseek,S. cerevisiae,False
+O60132,SPBC1706.01,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+Q9UTG6,SPAC1805.09c,635.0,9.113e-22,conserved,Foldseek,S. cerevisiae,False
+P27638,SPAC31G5.09c,1853.0,3.646e-44,conserved,Foldseek,S. cerevisiae,False
+P40377,SPBC4.04c,3933.0,1e-149,conserved,Foldseek,S. cerevisiae,False
+O74946,SPCC553.09c,1738.0,5.362e-55,conserved,Foldseek,S. cerevisiae,False
+Q9P4X4,SPAC959.02,1012.0,8.725e-19,conserved,Foldseek,S. cerevisiae,False
+Q10325,SPAC17G8.13c,1201.0,7.443e-35,conserved,Foldseek,S. cerevisiae,False
+Q9UUF1,SPBC17A3.08,1167.0,4.069e-32,conserved,Foldseek,S. cerevisiae,False
+P24339,SPAC25G10.07c,1321.0,2.402e-60,conserved,Foldseek,S. cerevisiae,False
+Q9P7V9,SPBC1703.12,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+O13651,SPBC8D2.06,6704.0,1e-149,conserved,Foldseek,S. cerevisiae,False
+Q9URX8,SPAC890.06,2920.0,1.971e-67,conserved,Foldseek,S. cerevisiae,False
+O60082,SPCC1494.08c,402.0,3.858e-15,conserved,Foldseek,S. cerevisiae,False
+Q8WZK1,SPBC839.09c,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+O42893,SPBC660.07,3843.0,4.684e-83,conserved,Foldseek,S. cerevisiae,False
+O14171,SPAC4D7.04c,1074.0,5.379e-28,conserved,Foldseek,S. cerevisiae,False
+O60154,SPBC19C7.05,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+Q9HDU5,SPBPB2B2.10c,2338.0,7.383e-58,conserved,Foldseek,S. cerevisiae,False
+O42899,SPBC119.06,800.0,3.053e-26,conserved,Foldseek,S. cerevisiae,False
+Q9P381,SPBC13A2.03,1715.0,7.989e-35,conserved,Foldseek,S. cerevisiae,False
+O59780,SPCC320.03,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+Q9URX7,SPAC890.07c,1934.0,5.137e-54,conserved,Foldseek,S. cerevisiae,False
+O74870,SPCC31H12.02c,640.0,8.901e-14,conserved,Foldseek,S. cerevisiae,False
+O74799,SPBC2D10.05,1051.0,1.247e-29,conserved,Foldseek,S. cerevisiae,False
+O59800,SPCC550.02c,517.0,1.481e-23,conserved,Foldseek,S. cerevisiae,False
+Q9P7Q4,SPAC1834.11c,3756.0,6.093e-100,conserved,Foldseek,S. cerevisiae,False
+Q09188,SPBC530.10c,1830.0,2.986e-33,conserved,Foldseek,S. cerevisiae,False
+O13621,SPBC691.05c,773.0,1.028e-20,conserved,Foldseek,S. cerevisiae,False
+O94355,SPBC428.06c,125.0,0.001269,conserved,Foldseek,S. cerevisiae,False
+O42900,SPBC119.07,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+Q10248,SPAC4G9.20c,1147.0,8.638e-23,conserved,Foldseek,S. cerevisiae,False
+O60184,SPBC23E6.09,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+O43089,SPBC947.14c,52.0,0.4306,conserved,Foldseek,S. cerevisiae,False
+P40387,SPAC328.03,3076.0,4.633e-71,conserved,Foldseek,S. cerevisiae,False
+P08463,SPBC1734.14c,670.0,8.638e-18,conserved,Foldseek,S. cerevisiae,False
+Q1MTN3,SPBC336.15,0.0,100.0,conserved,Foldseek,S. cerevisiae,False
+P04551,SPBC11B10.09,1624.0,1.032e-39,conserved,Foldseek,S. cerevisiae,False
+Q9UUA4,SPBC409.21,352.0,2.057e-08,conserved,Foldseek,S. cerevisiae,False
+O74416,SPCC14G10.03c,224.0,2.264e-06,conserved,Foldseek,S. cerevisiae,False
+O43017,SPBC354.03,824.0,1.055e-22,conserved,Foldseek,S. cerevisiae,False
+Q9USY7,SPBC1706.03,1603.0,1.067e-45,conserved,Foldseek,S. cerevisiae,False
+Q9P6L7,SPAC688.09,1384.0,1.314e-28,conserved,Foldseek,S. cerevisiae,False
+P40996,SPAC22H10.07,109.0,0.0005444,conserved,Foldseek,S. cerevisiae,False
+Q9P7Q2,SPAC186.01,0.0,100.0,unique,BlastP,C. albicans,True (n=14)
+Q92340,SPAC1F8.02c,0.0,100.0,unique,BlastP,C. albicans,False
+Q92344,SPAC1F8.06,0.0,100.0,unique,BlastP,C. albicans,True (n=14)
+Q10211,SPAC4H3.03c,0.0,100.0,unique,BlastP,C. albicans,False
+P0CU05,SPAC977.07c,57.0,100.0,unique,BlastP,C. albicans,True (n=14)
+Q9HDY9,SPAP11E10.02c,99.0,0.0314321,unique,BlastP,C. albicans,True (n=14)
+Q8TFG9,SPAPB15E9.01c,0.0,100.0,unique,BlastP,C. albicans,True (n=14)
+Q9C0Z8,SPAPB1E7.11c,60.0,100.0,unique,BlastP,C. albicans,False
+Q9C0Y2,SPAPB2C8.01,250.0,7.47373e-20,unique,BlastP,C. albicans,True (n=14)
+Q10340,SPBC106.19,0.0,100.0,unique,BlastP,C. albicans,False
+Q9URU4,SPBC1289.15,81.0,4.87746,unique,BlastP,C. albicans,True (n=14)
+P0CU04,SPBC1348.08c,57.0,100.0,unique,BlastP,C. albicans,True (n=14)
+O74308,SPBC15D4.02,165.0,8.74769e-11,unique,BlastP,C. albicans,False
+O94309,SPBC215.04,58.0,20.7217,unique,BlastP,C. albicans,False
+O74346,SPBC21D10.06c,0.0,100.0,unique,BlastP,C. albicans,True (n=14)
+O43019,SPBC354.05c,202.0,1.25111e-14,unique,BlastP,C. albicans,False
+Q9P5N1,SPBC359.04c,0.0,100.0,unique,BlastP,C. albicans,True (n=14)
+O94510,SPBC646.06c,58.0,100.0,unique,BlastP,C. albicans,False
+Q874R4,SPBC947.04,0.0,100.0,unique,BlastP,C. albicans,True (n=14)
+Q96WV6,SPBPJ4664.02,607.0,7.16111e-62,unique,BlastP,C. albicans,True (n=14)
+O74412,SPCC1223.13,0.0,100.0,unique,BlastP,C. albicans,False
+Q9P6S0,SPCC1742.01,127.0,2.27603e-05,unique,BlastP,C. albicans,True (n=14)
+Q7Z9I1,SPCC188.09c,115.0,0.000183926,unique,BlastP,C. albicans,True (n=14)
+O74954,SPCC736.08,0.0,100.0,unique,BlastP,C. albicans,False
+O94532,SPCC895.05,364.0,3.17752e-33,unique,BlastP,C. albicans,False
+Q9UST7,SPBC336.07,0.0,100.0,conserved,BlastP,C. albicans,False
+O74173,SPCC1450.04,445.0,2.69148e-54,conserved,BlastP,C. albicans,False
+O13814,SPAC17H9.17c,400.0,8.05207e-43,conserved,BlastP,C. albicans,False
+Q10251,SPAC56F8.03,2253.0,1e-149,conserved,BlastP,C. albicans,False
+Q9USK1,SPCC4B3.11c,222.0,3.72198e-23,conserved,BlastP,C. albicans,False
+O42858,SPAC23H3.05c,833.0,6.50536e-107,conserved,BlastP,C. albicans,False
+Q92372,SPBC660.13c,1007.0,1.18354e-127,conserved,BlastP,C. albicans,False
+O60132,SPBC1706.01,122.0,3.96087e-05,conserved,BlastP,C. albicans,False
+Q9UTG6,SPAC1805.09c,240.0,2.24348e-21,conserved,BlastP,C. albicans,False
+P27638,SPAC31G5.09c,1180.0,1e-149,conserved,BlastP,C. albicans,False
+P40377,SPBC4.04c,2464.0,1e-149,conserved,BlastP,C. albicans,False
+O74946,SPCC553.09c,711.0,7.64005e-84,conserved,BlastP,C. albicans,False
+Q9P4X4,SPAC959.02,566.0,3.82973e-70,conserved,BlastP,C. albicans,False
+Q10325,SPAC17G8.13c,699.0,1.10027e-84,conserved,BlastP,C. albicans,False
+Q9UUF1,SPBC17A3.08,569.0,7.6101e-69,conserved,BlastP,C. albicans,False
+P24339,SPAC25G10.07c,792.0,9.81905e-89,conserved,BlastP,C. albicans,False
+Q9P7V9,SPBC1703.12,651.0,8.57731e-75,conserved,BlastP,C. albicans,False
+O13651,SPBC8D2.06,3515.0,1e-149,conserved,BlastP,C. albicans,False
+Q9URX8,SPAC890.06,1195.0,2.30897e-139,conserved,BlastP,C. albicans,False
+O60082,SPCC1494.08c,0.0,100.0,conserved,BlastP,C. albicans,False
+Q8WZK1,SPBC839.09c,0.0,100.0,conserved,BlastP,C. albicans,False
+O42893,SPBC660.07,1936.0,1e-149,conserved,BlastP,C. albicans,False
+O14171,SPAC4D7.04c,607.0,1.96207e-76,conserved,BlastP,C. albicans,False
+O60154,SPBC19C7.05,69.0,4.41855,conserved,BlastP,C. albicans,False
+Q9HDU5,SPBPB2B2.10c,1481.0,1e-149,conserved,BlastP,C. albicans,False
+O42899,SPBC119.06,510.0,3.56376e-62,conserved,BlastP,C. albicans,False
+Q9P381,SPBC13A2.03,1060.0,1.89663e-140,conserved,BlastP,C. albicans,False
+O59780,SPCC320.03,185.0,1.52534e-12,conserved,BlastP,C. albicans,False
+Q9URX7,SPAC890.07c,963.0,5.10863e-129,conserved,BlastP,C. albicans,False
+O74870,SPCC31H12.02c,215.0,2.58953e-18,conserved,BlastP,C. albicans,False
+O74799,SPBC2D10.05,666.0,2.66085e-80,conserved,BlastP,C. albicans,False
+O59800,SPCC550.02c,301.0,3.79287e-30,conserved,BlastP,C. albicans,False
+Q9P7Q4,SPAC1834.11c,1694.0,1e-149,conserved,BlastP,C. albicans,False
+Q09188,SPBC530.10c,1271.0,1e-149,conserved,BlastP,C. albicans,False
+O13621,SPBC691.05c,559.0,1.12723e-59,conserved,BlastP,C. albicans,False
+O94355,SPBC428.06c,115.0,1.64955e-05,conserved,BlastP,C. albicans,False
+O42900,SPBC119.07,983.0,6.42246e-108,conserved,BlastP,C. albicans,False
+Q10248,SPAC4G9.20c,745.0,3.24231e-97,conserved,BlastP,C. albicans,False
+O60184,SPBC23E6.09,1246.0,1e-149,conserved,BlastP,C. albicans,False
+O43089,SPBC947.14c,58.0,46.0426,conserved,BlastP,C. albicans,False
+P40387,SPAC328.03,1789.0,1e-149,conserved,BlastP,C. albicans,False
+P08463,SPBC1734.14c,384.0,3.63403e-48,conserved,BlastP,C. albicans,False
+Q1MTN3,SPBC336.15,65.0,100.0,conserved,BlastP,C. albicans,False
+P04551,SPBC11B10.09,1041.0,8.14378e-142,conserved,BlastP,C. albicans,False
+Q9UUA4,SPBC409.21,54.0,100.0,conserved,BlastP,C. albicans,False
+O74416,SPCC14G10.03c,191.0,4.70705e-18,conserved,BlastP,C. albicans,False
+O43017,SPBC354.03,419.0,3.00508e-46,conserved,BlastP,C. albicans,False
+Q9USY7,SPBC1706.03,1014.0,6.70089e-124,conserved,BlastP,C. albicans,False
+Q9P6L7,SPAC688.09,847.0,2.0058e-110,conserved,BlastP,C. albicans,False
+P40996,SPAC22H10.07,551.0,4.44834e-63,conserved,BlastP,C. albicans,False
+Q9P7Q2,SPAC186.01,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q92340,SPAC1F8.02c,0.0,100.0,unique,Foldseek,C. albicans,False
+Q92344,SPAC1F8.06,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q10211,SPAC4H3.03c,89.0,0.01254,unique,Foldseek,C. albicans,False
+P0CU05,SPAC977.07c,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q9HDY9,SPAP11E10.02c,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q8TFG9,SPAPB15E9.01c,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q9C0Z8,SPAPB1E7.11c,0.0,100.0,unique,Foldseek,C. albicans,False
+Q9C0Y2,SPAPB2C8.01,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q10340,SPBC106.19,0.0,100.0,unique,Foldseek,C. albicans,False
+Q9URU4,SPBC1289.15,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+P0CU04,SPBC1348.08c,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+O74308,SPBC15D4.02,0.0,100.0,unique,Foldseek,C. albicans,False
+O94309,SPBC215.04,0.0,100.0,unique,Foldseek,C. albicans,False
+O74346,SPBC21D10.06c,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+O43019,SPBC354.05c,0.0,100.0,unique,Foldseek,C. albicans,False
+Q9P5N1,SPBC359.04c,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+O94510,SPBC646.06c,40.0,0.1129,unique,Foldseek,C. albicans,False
+Q874R4,SPBC947.04,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q96WV6,SPBPJ4664.02,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+O74412,SPCC1223.13,0.0,100.0,unique,Foldseek,C. albicans,False
+Q9P6S0,SPCC1742.01,0.0,100.0,unique,Foldseek,C. albicans,True (n=14)
+Q7Z9I1,SPCC188.09c,22.0,9.048,unique,Foldseek,C. albicans,True (n=14)
+O74954,SPCC736.08,0.0,100.0,unique,Foldseek,C. albicans,False
+O94532,SPCC895.05,0.0,100.0,unique,Foldseek,C. albicans,False
+Q9UST7,SPBC336.07,0.0,100.0,conserved,Foldseek,C. albicans,False
+O74173,SPCC1450.04,0.0,100.0,conserved,Foldseek,C. albicans,False
+O13814,SPAC17H9.17c,1308.0,2.25e-34,conserved,Foldseek,C. albicans,False
+Q10251,SPAC56F8.03,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9USK1,SPCC4B3.11c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O42858,SPAC23H3.05c,656.0,1.965e-20,conserved,Foldseek,C. albicans,False
+Q92372,SPBC660.13c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O60132,SPBC1706.01,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9UTG6,SPAC1805.09c,0.0,100.0,conserved,Foldseek,C. albicans,False
+P27638,SPAC31G5.09c,1954.0,7.921e-46,conserved,Foldseek,C. albicans,False
+P40377,SPBC4.04c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O74946,SPCC553.09c,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9P4X4,SPAC959.02,100.0,0.03981,conserved,Foldseek,C. albicans,False
+Q10325,SPAC17G8.13c,958.0,3.678e-33,conserved,Foldseek,C. albicans,False
+Q9UUF1,SPBC17A3.08,33.0,1.829,conserved,Foldseek,C. albicans,False
+P24339,SPAC25G10.07c,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9P7V9,SPBC1703.12,0.0,100.0,conserved,Foldseek,C. albicans,False
+O13651,SPBC8D2.06,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9URX8,SPAC890.06,0.0,100.0,conserved,Foldseek,C. albicans,False
+O60082,SPCC1494.08c,163.0,2.447e-07,conserved,Foldseek,C. albicans,False
+Q8WZK1,SPBC839.09c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O42893,SPBC660.07,3426.0,1.769e-75,conserved,Foldseek,C. albicans,False
+O14171,SPAC4D7.04c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O60154,SPBC19C7.05,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9HDU5,SPBPB2B2.10c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O42899,SPBC119.06,140.0,6.12e-05,conserved,Foldseek,C. albicans,False
+Q9P381,SPBC13A2.03,0.0,100.0,conserved,Foldseek,C. albicans,False
+O59780,SPCC320.03,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9URX7,SPAC890.07c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O74870,SPCC31H12.02c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O74799,SPBC2D10.05,564.0,3.54e-18,conserved,Foldseek,C. albicans,False
+O59800,SPCC550.02c,475.0,1.239e-23,conserved,Foldseek,C. albicans,False
+Q9P7Q4,SPAC1834.11c,3223.0,3.641e-95,conserved,Foldseek,C. albicans,False
+Q09188,SPBC530.10c,512.0,1.899e-11,conserved,Foldseek,C. albicans,False
+O13621,SPBC691.05c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O94355,SPBC428.06c,33.0,3.533,conserved,Foldseek,C. albicans,False
+O42900,SPBC119.07,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q10248,SPAC4G9.20c,572.0,3.483e-12,conserved,Foldseek,C. albicans,False
+O60184,SPBC23E6.09,0.0,100.0,conserved,Foldseek,C. albicans,False
+O43089,SPBC947.14c,0.0,100.0,conserved,Foldseek,C. albicans,False
+P40387,SPAC328.03,2871.0,3.635e-66,conserved,Foldseek,C. albicans,False
+P08463,SPBC1734.14c,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q1MTN3,SPBC336.15,0.0,100.0,conserved,Foldseek,C. albicans,False
+P04551,SPBC11B10.09,1697.0,1.056e-40,conserved,Foldseek,C. albicans,False
+Q9UUA4,SPBC409.21,0.0,100.0,conserved,Foldseek,C. albicans,False
+O74416,SPCC14G10.03c,0.0,100.0,conserved,Foldseek,C. albicans,False
+O43017,SPBC354.03,849.0,1.055e-22,conserved,Foldseek,C. albicans,False
+Q9USY7,SPBC1706.03,0.0,100.0,conserved,Foldseek,C. albicans,False
+Q9P6L7,SPAC688.09,590.0,2.026e-13,conserved,Foldseek,C. albicans,False
+P40996,SPAC22H10.07,0.0,100.0,conserved,Foldseek,C. albicans,False

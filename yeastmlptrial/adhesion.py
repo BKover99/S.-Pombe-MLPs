@@ -36,6 +36,14 @@ def show_image(image, title='Image', cmap_type='viridis'):
 
 
 def crop(image, x1=60, x2=60, y1=60, y2=60):
+    """Crop an image.
+    image: numpy array, representing an image.
+    x1: int, number of pixels to remove from the left side.
+    x2: int, number of pixels to remove from the right side.
+    y1: int, number of pixels to remove from the top.
+    y2: int, number of pixels to remove from the bottom."""
+
+
     # Remove x1 pixels from the left side
     image = np.delete(image, range(x1), axis=1)
     # Remove x2 pixels from the right side
@@ -48,6 +56,16 @@ def crop(image, x1=60, x2=60, y1=60, y2=60):
 
 #Define each colony as a distinct "object"
 def connected_components(filename, connectivity=2,x1=60,x2=60,y1=60,y2=60):
+    """Find and label objects in an image.
+    filename: string, the name of an image file.
+    connectivity: int, the connectivity of the objects, either 1 or 2.
+    x1: int, number of pixels to remove from the left side, goes into crop().
+    x2: int, number of pixels to remove from the right side, goes into crop().
+    y1: int, number of pixels to remove from the top, goes into crop().
+    y2: int, number of pixels to remove from the bottom, goes into crop().
+    
+    Returns: list of region properties and the mask of the image."""
+
     # load the image
     image = plt.imread(filename)
     #Crop the image
@@ -70,6 +88,13 @@ def connected_components(filename, connectivity=2,x1=60,x2=60,y1=60,y2=60):
 
 #Name each object after its position (A1-H12)
 def create_raw_layout(regions,mask):
+    """Create a raw layout of the plate.
+    regions: list of region properties, as returned by connected_components().
+    mask: numpy array, the mask returned by connected_components().
+    
+    Returns: The raw layout of the plate."""
+
+
     x_array=[]
     y_array=[]
     for r in regions:
@@ -106,14 +131,26 @@ def create_raw_layout(regions,mask):
     return labeled_image
 
 def im_to_raw_layout(image_fname,x1=60,x2=60,y1=60,y2=60):
+    """Create a raw layout from an image. Chains together
+      connected_components() and create_raw_layout().
+    image_fname: string, the name of an image file.
+    x1: int, number of pixels to remove from the left side, goes into crop().
+    x2: int, number of pixels to remove from the right side, goes into crop().
+    y1: int, number of pixels to remove from the top, goes into crop().
+    y2: int, number of pixels to remove from the bottom, goes into crop().
+
+    Returns: The raw layout of the plate.
+    """
     regions,mask=connected_components(image_fname, x1=x1,x2=x2,y1=y1,y2=y2)
     labeled_image=create_raw_layout(regions,mask)
     return labeled_image
 
 def pad_layout(image, raw_layout):
-    """Pad the layout with zeros to make it the same shape as the image.
+    """Pad the raw_layout with zeros to make it the same shape as the image.
     image: numpy array, representing an image.
-    layout: numpy array, representing a layout.
+    raw_layout: numpy array, representing a layout.
+
+    Returns: The padded layout.
     """
     # Get the difference in shape
     x_diff = image.shape[0] - raw_layout.shape[0]
@@ -125,14 +162,34 @@ def pad_layout(image, raw_layout):
     return layout
 
 def file_to_initial_layout(image_for_raw_layout,target_image,x1=60,x2=60,y1=60,y2=60):
+    """Create an initial layout from an image. Chains together
+        im_to_raw_layout() and pad_layout().
+    image_for_raw_layout: string, the name of an image file.
+    target_image: numpy array, representing an image.
+    x1: int, number of pixels to remove from the left side, goes into crop().
+    x2: int, number of pixels to remove from the right side, goes into crop().
+    y1: int, number of pixels to remove from the top, goes into crop().
+    y2: int, number of pixels to remove from the bottom, goes into crop().
+
+    Returns: The initial layout.
+    """
+
     raw_layout = im_to_raw_layout(image_for_raw_layout,x1=x1,x2=x2,y1=y1,y2=y2)
     initial_layout = pad_layout(target_image, raw_layout)
     return initial_layout
 
 def calculate_sums(image, layout):
-    # Calculate the sum of each square
+    """Calculate the sum of squares for each square in the layout.
+    This will be used to optimize the layout.
+    image: numpy array, representing an image.
+    layout: numpy array, representing a layout.
+
+    Returns: A list of the sum of squares for each square in the layout."""
+
+    
     #make binary from image
     image = image > threshold_otsu(image)
+    # Calculate the sum of each square
     sums = np.sum(np.square(image[layout != 0]))  
     
     return sums
@@ -142,7 +199,11 @@ def optimize_layout(image, layout):
     Optimize the layout by testing different offsets and finding the one with the lowest sum of squares.
     image: numpy array, representing an image.
     layout: numpy array, representing a layout.
+
+    Returns: The first optimized layout by roughly fitting the layout to the image.
     """
+
+
     # Define the search space for the offsets
     x_offsets = range(-250, 250, 12)
     y_offsets = range(-250, 250, 12)
@@ -174,6 +235,9 @@ def optimize_layout(image, layout):
 def optimize_layout_2(image,optimal_layout):
     """Optimize the layout of the image.
     image: numpy array, representing an image.
+    optimal_layout: numpy array, representing a layout, output from optimize_layout().
+
+    Returns: The final optimized layout.
     """
     
     # Define the size of the image
@@ -208,44 +272,57 @@ def optimize_layout_2(image,optimal_layout):
     final_layout = np.roll(final_layout, int(result.x[1]), axis=0)
     return final_layout, result.x
 
-def show_layout_over_im(image, initial_layout, final_layout):
-    """Print the image twice side by side, and show the two layouts with alpha=0.3.
-    image: numpy array, representing an image.
+def show_layout_over_im(image_before, image_after,initial_layout, final_layout):
+    """Show the layouts over the before after images.
+    image_before: numpy array, representing an image.
+    image_after: numpy array, representing an image.
     initial_layout: numpy array, representing an initial layout.
     final_layout: numpy array, representing a final layout.
+
+    Returns: None, just prints the images.
     """
+
     # Create a new figure
-    fig, ax = plt.subplots(1, 2, figsize=(15, 15))
+    fig, ax = plt.subplots(1, 3, figsize=(15, 15))
     
     # Show the image twice side by side
-    ax[0].imshow(image, cmap='gray')
-    ax[1].imshow(image, cmap='gray')
+    ax[0].imshow(image_before, cmap='gray')
+    ax[1].imshow(image_before, cmap='gray')
+    ax[2].imshow(image_after, cmap='gray')
+    
     
     # Show the initial layout with alpha=0.3
     ax[0].imshow(initial_layout, alpha=0.35)
-    
-    # Show the final layout with alpha=0.3
     ax[1].imshow(final_layout, alpha=0.35)
+    ax[2].imshow(final_layout, alpha=0.35)
 
 
-def layout_optimization(image, initial_layout,show_layout_fits=False):
-    """Optimize the layout of the image.
-    image: numpy array, representing an image.
-    layout: numpy array, representing an initial layout.
-    
-    output: final_layout, result.x
+def layout_optimization(image_before, image_after, initial_layout,show_layout_fits=False):
+    """Optimize the layout of the image. Chains together optimize_layout() and
+    optimize_layout_2() with the option to show the layout fits.
+
+    image_before: numpy array, representing an image.
+    image_after: numpy array, representing an image.
+    initial_layout: numpy array, representing an initial layout.
+    show_layout_fits: bool, whether to show the layout fits.
+
+    Returns: The final optimized layout.
     """
 
-    min_sum_of_squares, optimal_layout = optimize_layout(image, initial_layout)
-    final_layout, result = optimize_layout_2(image,optimal_layout)
+    min_sum_of_squares, optimal_layout = optimize_layout(image_before, initial_layout)
+    final_layout, result = optimize_layout_2(image_before,optimal_layout)
     if show_layout_fits:
 
-        show_layout_over_im(image, initial_layout, final_layout)
+        show_layout_over_im(image_before, image_after, initial_layout, final_layout)
     return final_layout, result
 
 
 def create_strain_layout(map_filename):
-    #try read_excel if fails try read_csv
+    """Create a list of strains in the layout.
+    map_filename: str, the filename of the map.
+
+    Returns: A list of strains in the layout."""
+
     try:
         map_df = pd.read_excel(map_filename,header=None)
     except:
@@ -260,6 +337,9 @@ def create_strain_layout(map_filename):
 
 
 def mean_int(image,labeled_image, mean_or_median="mean"):
+    """Calculate the mean intensity of each square of the image."""
+
+
     mi=[]
     for i in range(96):
         #take the plate value except the first letter
@@ -274,6 +354,7 @@ def mean_int(image,labeled_image, mean_or_median="mean"):
     return mi, maxval 
 
 def create_plate():
+    """Create a list of positions in the layout."""
     plate=[]
     for i in range(8):
         for j in range(12):
@@ -282,6 +363,18 @@ def create_plate():
 
 
 def processing(image, image_w, plate, strain_layout, labeled_image, keep_all=False, mean_or_median="mean"):
+    """Take a before and after image and compare the mean intensity of each square.
+    image: numpy array, representing an image.
+    image_w: numpy array, representing an image.
+    plate: list, representing the positions in the layout.
+    strain_layout: list, representing the strains in the layout.
+    labeled_image: numpy array, representing the labeled image.
+    keep_all: bool, whether to keep all the values.
+    mean_or_median: str, whether to use the mean or median intensity.
+
+    Returns: A dataframe with the position, strain, before wash, after wash, and ratio.
+    """
+    
     mean_intensities, max_val = mean_int(image, labeled_image, mean_or_median)
     mean_intensities_w, max_val_w = mean_int(image_w, labeled_image, mean_or_median)
 
@@ -320,6 +413,11 @@ def processing(image, image_w, plate, strain_layout, labeled_image, keep_all=Fal
     return df
 
 def get_filenames(folder):
+    """Get the filenames of the images in a folder.
+    folder: str, the folder containing the images.
+
+    Returns: A list of filenames.
+    """
     filenames = []
     for filename in os.listdir(folder):
         #if ends with jpg or png
@@ -336,7 +434,24 @@ def get_filenames(folder):
 
 
 def result_from_of_ims(image_before,image_after,strain_layout_file, image_for_raw_layout,show_layout_fits = False,x1=60,x2=60,y1=60,y2=60, keep_all=False,mean_or_median = "mean"):
-    
+    """Take a before and after image and return a dataframe
+    image_before: str, the filename of the before image.
+    image_after: str, the filename of the after image.
+    strain_layout_file: str, the filename of the strain layout.
+    image_for_raw_layout: str, the filename of the image used to create the initial layout.
+    show_layout_fits: bool, whether to show the layout fits.
+    x1: int, the number of pixels to crop from the left.
+    x2: int, the number of pixels to crop from the right.
+    y1: int, the number of pixels to crop from the top.
+    y2: int, the number of pixels to crop from the bottom.
+    keep_all: bool, whether to keep all the values.
+    mean_or_median: str, whether to use the mean or median intensity.
+
+    Returns: A dataframe with the position, strain, before wash, after wash, and ratio.
+
+
+    """
+
     strain_layout = create_strain_layout(strain_layout_file)
     plate = create_plate()
     
@@ -350,7 +465,7 @@ def result_from_of_ims(image_before,image_after,strain_layout_file, image_for_ra
        
 
         #Assume that before and after pictures have the same layout: no drastic change in position of plate.
-    final_layout, result = layout_optimization(before, initial_layout,show_layout_fits = show_layout_fits)
+    final_layout, result = layout_optimization(before, after, initial_layout,show_layout_fits = show_layout_fits)
         
         #invert images
     before=np.invert(before)
@@ -362,7 +477,26 @@ def result_from_of_ims(image_before,image_after,strain_layout_file, image_for_ra
 
 def result_from_folders_of_ims(images_before_folder,images_after_folder,strain_layout_file, image_for_raw_layout,show_layout_fits = True,
                                x1=60,x2=60,y1=60,y2=60, keep_all=False,mean_or_median = "mean",
-                               filtered_ratios=True):
+                               filtered_ratios=True,filtered_strains=True):
+    """Take a folder of before and after images and return a dataframe
+    of ratios with summary statistics for each strain.
+    images_before_folder: str, the folder containing the before images.
+    images_after_folder: str, the folder containing the after images.
+    strain_layout_file: str, the filename of the strain layout.
+    image_for_raw_layout: str, the filename of the image used to create the initial layout.
+    show_layout_fits: bool, whether to show the layout fits.
+    x1: int, the number of pixels to crop from the left.
+    x2: int, the number of pixels to crop from the right.
+    y1: int, the number of pixels to crop from the top.
+    y2: int, the number of pixels to crop from the bottom.
+    keep_all: bool, whether to keep all the values.
+    mean_or_median: str, whether to use the mean or median intensity.
+    filtered_ratios: bool, whether to filter the ratios.
+    filtered_strains: bool, whether to filter the strains.
+
+    Returns: A dataframe with the position, strain, before wash, after wash, and ratio.
+    """
+
     images_before = get_filenames(images_before_folder)
     images_after = get_filenames(images_after_folder)
 
@@ -379,7 +513,7 @@ def result_from_folders_of_ims(images_before_folder,images_after_folder,strain_l
        
 
         #Assume that before and after pictures have the same layout: no drastic change in position of plate.
-        final_layout, result = layout_optimization(before, initial_layout,show_layout_fits = show_layout_fits)
+        final_layout, result = layout_optimization(before, after, initial_layout,show_layout_fits = show_layout_fits)
         
         #invert images
         before=np.invert(before)
@@ -399,7 +533,9 @@ def result_from_folders_of_ims(images_before_folder,images_after_folder,strain_l
         merged_df.loc[merged_df["ratio"] > 1, "ratio"] = 1
         
         # Remove entries with before_wash less than 0.1
-        merged_df = merged_df[merged_df["before_wash"] > 0.1]
+        if filtered_ratios:
+            merged_df = merged_df[merged_df["before_wash"] > 0.1]
+        
         # Group the dataframe by strain and calculate the mean and SEM of the ratio and before_wash columns
         grouped_df = merged_df.groupby("strain", as_index=False).agg(
             {"ratio": "mean", "before_wash": "mean", "after_wash": "mean"}
@@ -408,7 +544,8 @@ def result_from_folders_of_ims(images_before_folder,images_after_folder,strain_l
             "ratio"
         ]
         # Remove entries with before_wash less than 0.1 and strain equal to "TYPO"
-        grouped_df = grouped_df[grouped_df["before_wash"] > 0.1]
+        if filtered_strains:
+            grouped_df = grouped_df[grouped_df["before_wash"] > 0.1]
         grouped_df = grouped_df[grouped_df["strain"] != "TYPO"]
         grouped_df = grouped_df[grouped_df["strain"] != "EMPTY"]
         #from merged df take every single ratio value for a given strain and put it in a list
@@ -421,6 +558,11 @@ def result_from_folders_of_ims(images_before_folder,images_after_folder,strain_l
     return grouped_df
 
 def barchart_from_res(df):
+    """Take a dataframe of ratios and plot a bar chart of the ratios.
+    df: dataframe, the dataframe of ratios.
+
+    Returns: A bar chart of the ratios.
+    """
     plt.figure(figsize=(20,10))
     plt.bar(df["strain"],df["ratio"],yerr=df["sem"],capsize=5)
     plt.xticks(rotation=90)

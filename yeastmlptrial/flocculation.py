@@ -59,11 +59,12 @@ def results_from_df(df, sqrt_n_measurements, neg_control_num, map_file):
         #change entries with Unused to 0
         
         i = i.replace("Unused", np.nan)
-        i = i.to_numpy().flatten()
-        #remogve nan values
+        i = np.array(i).flatten()
         i = i[~np.isnan(i)]
-        #only keep floats, no other junk
+
         i = [x for x in i if isinstance(x, float)]
+       
+        
         #subtract control_mean
         i = i - control_mean
         cv = np.std(i)/np.mean(i)
@@ -80,6 +81,9 @@ def results_from_df(df, sqrt_n_measurements, neg_control_num, map_file):
 def folder_to_results(folder,sqrt_n_measurements, neg_control_num,map_file,groupby="Strain"):
     
     files = glob.glob(folder + "/*.xlsx")
+    #order files based on the number at the end of the file name
+    files = sorted(files, key=lambda x: int(os.path.splitext(x)[0].split("_")[-1]))
+    
     CV_dataframe_list = []
     #if sqrt_n_measurements is not an array than make an array of length files from sqrt_n_measurements
     if not isinstance(sqrt_n_measurements, list):
