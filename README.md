@@ -7,7 +7,7 @@ The structure of the repository is as follows:
 Contains all the code to reproduce the analysis and plots found in the thesis. All code written by Bence Kover, with early input from co-author Celeste Cohen.
 
 ### yeastmlptrial
-Contains code under development for https://github.com/BKover99/yeastmlp , also found on https://pypi.org/project/yeastmlp/ . This software package allows fast quantification of MLP formation, including the analysis of the adhesion and flocculation assays from our work. Install the package using * pip install yeastmlp * . For example code and analysis see the work in this repo, and also the tutorial Colab notebooks on https://github.com/BKover99/yeastmlp .
+Contains code under development for https://github.com/BKover99/yeastmlp , also found on https://pypi.org/project/yeastmlp/ . This software package allows fast quantification of MLP formation, including the analysis of the adhesion and flocculation assays from our work. Install the package using *pip install yeastmlp* . For example code and analysis see the work in this repo, and also the tutorial Colab notebooks on https://github.com/BKover99/yeastmlp .
 
 ### Internal data
 Contains all of our collected experimental data.
