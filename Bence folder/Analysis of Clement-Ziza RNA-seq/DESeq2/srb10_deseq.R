@@ -87,3 +87,7 @@ EnhancedVolcano(sig_res_final,
 
 write.csv(sig_res_final, file="Bence folder/Analysis of Clement-Ziza RNA-seq/DESeq2/DE_results.csv")
 
+
+#The final plot for the publication was actually made in Python.
+
+
