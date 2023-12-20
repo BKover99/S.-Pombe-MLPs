@@ -24,6 +24,7 @@ Excel spreadsheet with multiple pages to include all the processed data which mi
 - [x] Finishing Master's thesis, and releasing the repo - May 5, 2023
 - [x] Releasing the MLP quantification code as a standalone package (See https://github.com/BKover99/yeastmlp) - Jun 15, 2023
 - [x] Finishing all experimental work and uploading all experimental data - Aug 29, 2023
-- [ ] Tidying up all analysis 
-- [ ] Submitting our sequencing data
+- [x] Tidying up all analysis - Oct 1, 2023
+- [x] Submitting our sequencing data - Dec 15, 2023 - https://www.ebi.ac.uk/ena/browser/view/PRJEB69522
+- [x] Upload pre-print - Dec 15, 2023  https://www.biorxiv.org/content/10.1101/2023.12.15.571870v1.article-info
 - [ ] Publication of peer-reviewed research article
