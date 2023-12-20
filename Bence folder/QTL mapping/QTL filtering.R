@@ -1,4 +1,4 @@
-#install.packages("/Users/bencekover/Downloads/RFQTL.tar.gz",repos = NULL)
+#install.packages("/Users/k23030440/Downloads/RFQTL.tar.gz",repos = NULL)
 
 library(RFQTL)
 
@@ -9,18 +9,22 @@ library(qqman)
 #loading in the genotype presence-absence matrix
 
 #OLD
-d<-read.table(file = '/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/SupplementaryDataset_S7_genotype.tsv', sep = '\t', header = TRUE)
+#d<-read.table(file = '/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/SupplementaryDataset_S7_genotype.tsv', sep = '\t', header = TRUE)
 
 #NEW
-#d<-read.table(file = '/Users/bencekover/bioinformatics/projects/segregants/updated_genotype_matrix.tsv', sep = '\t', header = TRUE)
-#d<-read.table(file = '/Users/bencekover/bioinformatics/projects/segregants/updated_genotype_matrix_final_pos.tsv', sep = '\t', header = TRUE)
+d<-read.table(file = '/Users/k23030440/S.-Pombe-MLPs - most recent/Bence folder/QTL mapping/SupplementaryDataset_S7_genotype.tsv', sep = '\t', header = TRUE)
+#d<-read.table(file = '/Users/k23030440/Old macbook everything_hopefully/bioinformatics/projects/segregants/updated_genotype_matrix_final_pos.tsv', sep = '\t', header = TRUE)
+#d<-read.table(file = '/Users/k23030440/Old macbook everything_hopefully/bioinformatics/projects/updated_genotype_matrix_final_final.tsv', sep = '\t', header = TRUE)
+
 
 d<-d[c(1:(nrow(d)-12)),]
 genotype1<-d[,-c(1:4)]
 genotype1<-data.matrix(genotype1)
 genotype1<-t(genotype1)
+
+
 #loading in the filtering measurements
-phenotype1<-read.csv('/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/filtering_phenotypes.csv')
+phenotype1<-read.csv('/Users/k23030440/S.-Pombe-MLPs - most recent/Bence folder/QTL mapping/filtering_phenotypes.csv')
 phenotype1<-phenotype1[,-1]
 phenotype1<-phenotype1[which(phenotype1$Strain %in% rownames(genotype1)),]
 strainNames1 <- phenotype1$Strain
@@ -47,13 +51,13 @@ r=rfMapper(mappingData = mappingData1,
 #Here the wd is a folder in which your permutations will go
 
 #To test old
-setwd("/Users/bencekover/Library/CloudStorage/OneDrive-UniversityCollegeLondon/MSci Bahler lab/S.-Pombe-biofilm/Bence folder/QTL mapping/permutations/permutations_testing old")
+setwd("/Users/k23030440/permutations")
 
 permutedScores1 <- rfMapper(mappingData = mappingData1,
                             permute = T,
                             nforest = 100,#was 100
                             ntree = 100,
-                            nPermutations=20000, #was 100
+                            nPermutations=100, #was 100
                             file="filter_permut.RData",
                             nCl=1,
                             clType="SOCK")

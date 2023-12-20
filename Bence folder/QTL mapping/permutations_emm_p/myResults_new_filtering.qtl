@@ -1,8 +1,0 @@
-QTL	trait number	trait name	first marker	last marker	chromosome	first position	last position	smallest p-value	most significant predictor
-1	1	Flocc	338	350	1	1513782	1663041	3e-03	338
-2	1	Flocc	376	377	1	1712900	1713176	2.5e-03	376
-3	1	Flocc	393	393	1	1742403	1742403	1e-02	393
-4	1	Flocc	558	1569	1	2547852	4962445	5e-04	584
-5	1	Flocc	2357	2426	2	2364604	2505327	3.5e-03	2385
-6	1	Flocc	2675	2680	2	3159888	3166406	5.5e-03	2675
-7	1	Flocc	2790	2843	2	3379702	3489185	4.5e-03	2791

@@ -25,8 +25,8 @@ FYPO:0001203,coflocculating cells
 FYPO:0004153,increased flocculation in stationary phase
 FYPO:0003335,increased galactose-specific flocculation
 FYPO:0000155,increased flocculation
-Phenotype keyword:,pseudohyphal
-Phenotype keyword:,invasive growth
-Phenotype keyword:,flocculation
-Phenotype keyword:,hyphal growth
-Phenotype keyword:,biofilm
+Phenotype keyword:,"pseudohyphal (does not contain string "" normal"")"
+Phenotype keyword:,"invasive growth (does not contain string "" normal"")"
+Phenotype keyword:,"flocculation (does not contain string "" normal"")"
+Phenotype keyword:,"hyphal growth (does not contain string "" normal"")"
+Phenotype keyword:,"biofilm (does not contain string "" normal"")"
