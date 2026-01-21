@@ -6,11 +6,14 @@ The structure of the repository is as follows:
 ### Bence folder
 Contains all the code to reproduce the analysis and plots found in the thesis. All code written by Bence Kover, with early input from co-author Celeste Cohen.
 
-### yeastmlptrial
-Contains code under development for https://github.com/BKover99/yeastmlp , also found on https://pypi.org/project/yeastmlp/ . This software package allows fast quantification of MLP formation, including the analysis of the adhesion and flocculation assays from our work. Install the package using *pip install yeastmlp* . For example code and analysis see the work in this repo, and also the tutorial Colab notebooks on https://github.com/BKover99/yeastmlp .
+### Ben folder
+Contains some code for analysis of data produced during the revision process. These include growth curve analysis and cropping microscopy images.
 
 ### Internal data
-Contains all of our collected experimental data.
+Contains all of our collected experimental data for the initial submission and pre-print.
+
+### revisions_data
+Contains the collected experimental data during the revision process.
 
 ### External data
 Data used in the thesis from other publications.
@@ -27,4 +30,6 @@ Excel spreadsheet with multiple pages to include all the processed data which mi
 - [x] Tidying up all analysis 
 - [x] Submitting our sequencing data https://www.ebi.ac.uk/ena/browser/view/PRJEB69522
 - [x] Posting pre-print https://www.biorxiv.org/content/10.1101/2023.12.15.571870v2
-- [ ] Publication of peer-reviewed research article (Currently under peer-review at Review Commons
+- [x] Publication of peer-reviewed research article (Currently under peer-review at Review Commons
+- [x] Revisions completed and resubmitted.
+- [ ] Final publication at XXXX
