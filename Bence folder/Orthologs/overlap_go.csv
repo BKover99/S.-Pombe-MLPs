@@ -1,2 +1,0 @@
-,albicans_name(s),cerevisiae_name(s),pombe_name(s),albicans,cerevisiae,pombe,functional_orthopattern orthopattern,orthopattern,gene common name,pombe_function
-42,['C4_01260W_A'],['YBR182C' 'YPL089C'],['SPBC317.01'],1.0,1.0,1.0,7.0,7.0,['mbx2'],"['DNA-binding transcription factor, MADS-box Pvg4']"
