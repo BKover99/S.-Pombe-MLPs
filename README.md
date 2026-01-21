@@ -1,5 +1,7 @@
 # S.-Pombe-MLPs
-This repository contains all the code to produce the findings in my Master's thesis and the subsequent research article.
+This repository contains all the code to produce the findings in Kövér et al.: Genetic and environmental determinants of multicellular-like phenotypes in fission yeast
+
+This github repo contains all code and smaller data files. To access the data please clone the repository. For the full repository with larger data files please visit Figshare ().
 
 The structure of the repository is as follows:
 
